@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Learn Prototype </title>
+</head>
+<body>
+
+ <script type="text/javascript">
+ 	// Use Prototype function
+function Mobiles(model_no, sprice) {
+	// This is a Instance Member
+	this.model = model_no;
+  this.color = 'Black';
+	// private property
+	this.price = 5000;
+	
+}
+
+var oppo = new Mobiles('OPPO', 2000); 
+var vivo = new Mobiles('ViVo', 3000); 
+
+ // Classname.prototype.key = 'value';
+// prototype is a parent super class
+ // This is a Prototype Member
+ Mobiles.prototype.color = 'Green';
+ // this function is used to tell counte all properties and this is function tell instance number not tell prototype member and show prototype member then use for loop for show both instance and prototype members
+ document.write(Object.keys(oppo) + "<br>");
+ document.write(oppo.color + "<br>");
+ document.write(vivo.color + "<br>");
+ console.log(oppo);
+ console.log(vivo);
+// 
+  for (var key in oppo)
+  {
+ 	  document.write(key);
+  }
+
+  document.write("<h1>Prototype Object Literal Method</h1> <br>");
+// it will return Object.prototype in console.log
+console.log(Object.prototype);
+// var b is a object and object is a null
+var b = {} 
+// console.log(Object.getPrototypeOf(b));
+// if this function used show null in console log 
+console.log(Object.getPrototypeOf(Object.prototype));
+
+  document.write("<h1>Prototype Object Construct Method</h1> <br>");
+  var b1 = new Object();
+ console.log(Object.getPrototypeOf(b1));
+
+ document.write("<h1>Prototype Object Array Method</h1> <br>");
+  var b3 = new Array();
+  console.log(Object.getPrototypeOf(b3));
+  // use b3 var use array.prototype and array.prototype used object.prototype and object used null
+ console.log(Object.getPrototypeOf(Array.prototype));
+
+document.write("<h1>Prototype Object String Method</h1> <br>");
+  var b4 = new String();
+ console.log(Object.getPrototypeOf(b4));    
+ // use b4 string.prototype and string.prototype used object.prototype and used object.prototype null
+ console.log(Object.getPrototypeOf(String.prototype));    
+
+document.write("<h1>Construct Function Method </h1> <br>");
+// first create function name object then create prototype object
+function Mobile()
+{
+  this.a =105;
+}
+
+// two methods call function
+document.write("Call Function Method One <br>");
+document.write(Mobile + "<br>");
+console.log(Mobile.prototype);
+// Create Prototype Method
+Mobile.prototype.a = 786;
+var lg = new Mobile();
+console.log(lg.__proto__);  
+// if property no defined and declaration and call property then check object and then check prototype if not both available then show undefined value 
+
+  // Check first coniditon object if empty then check prototype.object and show value
+
+// If both value available properties function and prototype method then check properties value and show not show prototype value
+console.log(lg.a);
+
+// verify check condition
+document.write("Method one check condition <br>");
+document.write("Call Function Mobile Two <br>");
+// __proto__ this used function for properties
+console.log(Mobile.prototype === lg.__proto__);
+document.write("Call Function Mobile Three <br>");
+document.write("Method two check condition <br>");
+console.log(Mobile === Mobile.prototype.constructor);
+
+document.write("<h1> Prototype Inheritance</h1> <br>");
+// Not Inheritance class or function only inertitance prototype.
+// If attach one prototype to another called chain
+document.write("Super Class <br>");
+var Mbl = function ()
+{
+  this.c =10;
+}
+
+ Mbl.prototype.z = 30;
+ 
+
+ document.write("Child Class or Sub Class <br>");
+ var Samsung = function()
+ {
+  Mbl.call(this);
+  this.d = 20;
+ }
+
+// if super class properties use for child class then call function and use properties
+
+ // if used super class prototype property used particular protoype function if use properties for all same access 
+ //   Prototype Inheritance
+
+ Samsung.prototype = Object.create (Mobile.prototype);
+ Samsung.prototype.constructor = Samsung;
+
+ Samsung.prototype.z =  50;
+ // Super Class Object
+ var m = Mbl(); 
+// Child Class Object
+ var s = new Samsung();
+
+ document.write(s.c + "<br>");
+ document.write(s.d + "<br>");
+ document.write(s.z + "<br>");
+
+document.write("<h3>DoNe</h3>");
+exit;
+
+// Literal object
+// var b = {};
+// Prototype Object
+// var b1 = new Object();
+ // prototype array 
+// var b1 = new Array(); 
+// String Prototype
+// var b1 = new String(); 
+// console.log(Object.getPrototypeOf(b1));
+// console.log(Object.getPrototypeOf(Object.prototype));
+ // document.write(oppo.color);
+ // document.write("Super Class <br>");
+ // var Mbl = function ()
+ // document.write("<br>");
+ // document.write(qmobile.color);
+ // console.log(oppo);
+ // console.log(qmobile);
+//check property exist
+
+// function mobile(model_no) {
+// 	this.model_no;
+// 	// this.memory = 4;
+// 	this.color = 'white';
+
+// }
+// var oppo = new mobile('OPPO');
+
+// // if (typeof oppo.memory !== 'undefined') {
+// // 	document.write('Available');
+// // }else{
+// // 	document.write('Not exist');
+// // }
+// // in operator exist parameter
+// // if ('memory' in oppo) {
+// // 	document.write('Available');
+// // }else{
+// // 	document.write('Not exist');
+// // }
+// // hasOwnProperty exist parameter
+// if (oppo.hasOwnProperty('color')) {
+// 	document.write('Available color');
+// }else{
+// 	document.write('Not exist');
+
+// construct function
+//   function Mobile ()
+// {
+// 	this.a = 50;
+  
+// }
+
+// // document.write(Mobile.prototype);
+// var lg = new Mobile();
+// console.log(Mobile.prototype);
+// console.log(lg.__proto__);
+
+// // verfiy function
+// console.log(Mobile.prototype === lg.__proto__);
+// console.log(Mobile === lg.__proto__.constructor);
+// console.log(Mobile === Mobile.prototype.constructor);
+
+// Mobile.prototype.a = 20;
+// var nokia = new Mobile ();
+// console.log(nokia.a);
+// document.write(nokia.a);
+
+// Prototype Inhertance class 
+
+// Super and Parent Class
+// var Mobile = function() 
+// {
+//   this.a = 10;
+// }
+// Mobile.prototype.z = 30;
+
+// // Child and sub class
+// var Samsung = function () 
+// {
+//   Mobile.call(this);
+//   this.b = 20;
+// }
+
+// // Prototype inheritance
+//  Samsung.prototype = Object.create(Mobile.prototype);
+//  Samsung.prototype.constructor = Samsung;
+
+//  Mobile.prototype.z = 50;
+//  // sub and child object
+// var s = new Samsung();
+
+// // Super and Parent object
+// var m = new Mobile();
+
+// document.write(m.a + "<br>");
+// document.write(s.b + "<br>");
+// document.write(m.z + "<br>");
+// Function for inheritance
+// function extend(child, parent) 
+// {
+// 	child.prototype = Object.create(parent.prototype);
+//     child.prototype.constructor = child;
+// }
+
+// Super Parent Class
+// var Mobile =function () {
+
+// }
+
+// // Prototype Method
+// Mobile.prototype.getModel = function() 
+// {
+// 	return this.model;
+// }
+// Mobile.prototype.getPrice = function() 
+// {
+// 	return this.price;
+// }
+
+// // Sub and Child Class
+
+// var Samsung = function (model, price) 
+// {
+// 	this.model = model;
+// 	this.price = price;
+// }
+
+// // Sub and Child Class
+// var Oppo = function (model) 
+// {
+// 	this.model = model;
+	
+// }
+
+// // Inheritance
+// // Samsung.prototype = Object.create(Mobile.prototype);
+// // Samsung.prototype.constructor = Samsung;
+// // Oppo.prototype = Object.create(Mobile.prototype);
+// // Oppo.prototype.constructor = Oppo;
+// extend(Samsung, Mobile);
+// extend(Oppo, Mobile);
+
+// var galaxy = new Samsung('Galaxy ', 3500);
+// var oppo = new Oppo('OppO');
+
+// document.write(galaxy.getModel());
+// document.write(galaxy.getPrice());
+// console.log(galaxy.getModel());
+
+// document.write(oppo.getModel());
+// console.log(oppo.getModel());
+
+// Tow method super and sub class function
+	
+// var Mobile = function (model)
+// {
+// 	this.model = model;
+// }
+
+// Mobile.prototype.getModel = function() 
+// {
+// return this.model;
+// }
+
+// var Iphone = function(model, price) {
+// 	Mobile.call(this, model); 
+// 	this.price = price;
+// }
+
+// // Inheritance Super and Child Class
+
+// Iphone.prototype = Object.create(Mobile.prototype);
+// Iphone.prototype.constructor = Iphone;
+
+// // Create Object super and sub class
+// var phone = new Iphone('Iphone', 1000);
+// document.write(phone.getModel());
+// document.write(phone.price);
+// console.log(phone.getModel());
+// console.log(phone.model);
+
+// Over writing function inheraiance
+
+// function extend(Child, Parent) {
+// 	Child.prototype = Object.create(Parent.prototype);
+// 	Child.prototype.constructor = Child;
+// }
+
+// // Super Class
+// var Mobile = function(argument) {
+// 	// body...
+// }
+
+// // Prototype Member
+// Mobile.prototype.show = function() {
+// 	return "Super Class Method";
+// }
+
+// // Sub Class
+
+// var Samsung = function () {
+// 	// body...
+// }
+
+// // Sub Class Samsung Extending super Class Mobile
+
+// extend(Samsung, Mobile);
+
+// Samsung.prototype.show = function() {
+// 	return "Sub Class Method";
+// }
+
+// var sam = new Samsung();
+// var mob = new Mobile();
+
+// // Accessing super class method property method using sub class object
+// document.write(sam.show() + "<br>");
+// document.write(mob.show());
+
+// JavaScript Multi level Inheritance
+
+// super class
+//   var Mobile =function ()
+//    {
+//   	this.a = 10;
+//   }
+//   // Prototype properity of mobile
+//   Mobile.prototype.z = 30;
+
+//   // Sub class
+//   var Samsung = function () 
+//   {
+//   	Mobile.call(this);
+//   	this.b = 20;
+//   }
+
+//   // sub class and sub class call
+
+//   var Galaxy = function() {
+//   	Samsung.call(this);
+//   	this.c = 100;
+//   }
+
+//   // Inheritance
+//   Samsung.prototype = Object.create(Mobile.prototype);
+//   Samsung.prototype.constructor = Samsung;
+
+//   Galaxy.prototype = Object.create(Samsung.prototype);
+//   Galaxy.prototype.constructor = Galaxy;
+
+//   // Create Object
+
+//   var m = new Mobile();
+//   var s = new Samsung();
+//   var g = new Galaxy();
+// // Show output on browser
+// document.write("Galaxy Object Can Access <br>");
+// document.write("Mobile A :" + g.a + "<br>");
+// document.write("Samsung B :" + g.b + "<br>");
+// document.write("Mobile Prototype Z :" + g.z + "<br>");
+// document.write("Galaxy C :" + g.c + "<br> <br>");
+
+// document.write("Mobile Object Can Access <br>");
+// document.write("Mobile A :" + m.a + "<br>");
+// document.write("Samsung B :" + m.b + "<br>");
+// document.write("Mobile Prototype Z :" + m.z + "<br>");
+// document.write("Galaxy C :" + m.c + "<br> <br>");
+
+// document.write("Samsung Object Can Access <br>");
+// document.write("Mobile A :" + s.a + "<br>");
+// document.write("Samsung B :" + s.b + "<br>");
+// document.write("Mobile Prototype Z :" + s.z + "<br>");
+// document.write("Galaxy C :" + s.c + "<br> <br>");
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variable let and Const</title>
+</head>
+<body>
+<script type="text/javascript">
+	<!-- create  var veriable show data in windows property only	 -->
+ document.write("<h2> Variable Var & Let </h2> <br>");
+ var v = " Var Variable";
+ let l = " Let Variable";
+ const c = " Const Variable";
+ document.write(v + "<br>" + l + "<br>" + c + "<br>");
+// var variable is call in function and out function aur let only called inner function and loop etc.
+document.write("Variable var function <br>");
+ function myvar()
+ {
+ var a = 10;
+ if (true) 
+  {
+  	var a = 20;
+  	document.write(a + "<br>");
+  }
+  document.write(a + "<br>");
+ }
+ 
+ myvar();
+
+ document.write("Variable Let function <br>");
+ function mylet()
+ {
+ let a = "let function";
+ if (true) 
+  {
+  	let a = "Let function block";
+  	document.write(a + "<br>");
+  }
+  document.write(a + "<br>");
+ }
+ 
+ mylet();
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Functions</title>
+</head>
+<body>
+	<script>
+
+// General function is called after function and  before error not found
+// display();
+		// simple creating function
+document.write("<h2>Simple Create and call function </h2> <br>");
+function display()
+{
+	document.write("Hamid Ali jutt <br>");
+}
+// calling function
+display();
+
+document.write("<h2>Function Argument Missing</h2> <br>");
+
+// Function Argument Missing
+function add(a, b, c)
+{
+  document.write("A: " + a + " B: " + b + " C: " + c + "<br>");
+}
+
+// add(20, 30, 50);
+// missing parameter show undefined
+add(20, 30);
+
+// Argument Object
+ document.write("<h2> Argument Object and length property </h2> <br>");
+  function display(name, email)
+  {
+  	var len = arguments.length;
+  	document.write("Name: " + arguments[0] + " Email: " + arguments[1] + " Length: " + len + "<br>");
+  }
+ disp("Hamid Ali jutt", "hamid@gmail.com");
+
+document.write("<h2> For loop get argument value</h2> <br>");
+ function disp(name, email)
+  {
+  	// store default argument
+  	arguments [0] = " Name: Hamid Ali (H~A)";
+  	for (i=0; i< arguments.length; i++)
+  	{
+  		document.write(arguments[i] + " ");
+  	}
+  }
+
+ // disp("Name: Hamid Ali jutt", " Email: hamid@gmail.com", " Password:  Password1");
+ disp("Name: Hamid Ali jutt", " Email: hamid@gmail.com", " Password:  Password1", 786105	);
+ 
+ document.write("<h2> Callee Property</h2> <br>");
+ function disp(name, email, password)
+  {
+  		document.write(arguments.callee + " ");
+  }
+ disp("Name: Hamid Ali jutt", " Email: hamid@gmail.com", " Password:  Password1");
+ 
+ document.write("<h2>Too Many Function Argument </h2> <br>");
+
+ function disp(a, b)
+  {
+  document.write("A: " + a + " B: " + b + " C: " + arguments[2]);	
+  }
+ disp(10, 20, 30);
+ 
+ document.write("<h2> default parameter</h2> <br>");
+// at the end write default parameter
+function add(a,b,c=70)
+{
+ document.write("A: " + a + "<br> B: " + b + "<br> C: " + c + "<br>");
+}
+
+// add(40, 60, 80);
+add(40, 60);
+
+document.write("<h2> default parameter null </h2> <br>");
+// at the end write default parameter
+function plus(a,b,c=null)
+{
+ document.write("A: " + a + "<br> B: " + b + "<br> C: " + c + "<br>");
+}
+
+// add(40, 60, 80);
+plus(40);
+
+document.write("<h2> default parameter Array </h2> <br>");
+// at the end write default parameter
+function Add(a,b,c=[786, 105])
+{
+ document.write("A: " + a + "<br> B: " + b + "<br> C: " + c[0] + c[1] + "<br>");
+}
+
+Add(40, 60, [80, 100]);
+//  Add(40);
+exit;
+document.write("<h2>Rest parameter <h2> <br>");
+// Rest Parameter is alternative array rest and argument difference rest is a array argument is not array but work with same array
+function Show(...args)
+{
+ document.write(args[0], args[1] + "<br>");
+}
+Show(786, 105, "Jutt");
+
+document.write("Difference Between Rest parameter Argument Object <br>");
+document.write("Rest parameter <br>");
+function restshow(a,...args)
+{
+ console.log(a);
+ console.log(args);	
+ document.write(a + "<br>");
+ document.write(args + "<br>");
+}
+restshow(10,20,30,40,50);
+
+document.write("Argument Object <br>");
+function show(a)
+{
+ console.log("a: " + a);
+ console.log(arguments);	
+ document.write(a + "<br>");
+ document.write(arguments + "<br>");
+}
+show(60,70,80,90,100);
+
+document.write("<h2>Return Statement</h2> <br>");
+// Return statement is used to multiple work then return parameter and called function.
+function multiple(a, b)
+{
+ return (a*b);
+}
+
+var x = multiple(20, 30);
+document.write(x + "<br>");
+
+document.write("<h2> Closure and Nested function </h2> <br>");
+  // closure is used to access outer function variable in inner function access but inner function cannto access variable outer function
+  function show()
+  {
+    var j = "J is a local var of outer function";
+    document.write(j + "<br>");
+    function innerFun()
+    {
+      
+      var k = "K is a local variable of inner Function";
+      document.write(k + "<br>");
+      document.write(j + "<br>");
+    
+    }
+
+    innerFun();
+      // document.write(k + "<br>");
+      document.write(j + "<br>");
+  }
+  show();
+
+document.write("<h2> Function declaration </h2>");
+// function declartion is call first and end function
+// name();
+function name()
+{
+  document.write("Name: Hamid Ali <br>");
+}
+name();
+
+document.write("<h2>Function Expression </h2>")
+
+var disp = function name()
+{
+  document.write("Function Expression <br>");
+}
+disp();
+
+document.write("<h2>Anonymous Function </h2><br>")
+// without function name is called anonymous function
+ var email = function()
+{
+  document.write("Email: hamidiqbal105@gmail.com<br>");
+}
+email();
+
+document.write("<h2>Passing Anonymous Function as Argument </h2><br>")
+ var gmail = function(myfun)
+{
+ return myfun();
+}
+
+document.write(gmail (function()
+  {
+    return "Geekyshows";
+  }) + "<br>");
+
+document.write("<h2>Returning Anonymous Function </h2><br>");
+ function number(a)
+ {
+  return function(b)
+   {
+     return a+b;
+   };
+ }
+
+ var af = (number(20));
+ document.write(af(30) + "<br>");
+
+document.write("<h2> Arrow Function with parameter </h2><br>")
+// arrow function can't called up function and not line break.
+var arrowfn = (a, b) => 
+{
+  document.write(a + " " + b);
+};
+arrowfn(786, 105);
+
+document.write("<h2> Arrow Function default value </h2><br>")
+// arrow function can't called up function and not line break.
+var arrowfn = (a, b=105) => 
+{
+  document.write(a + " " + b);
+};
+arrowfn(786);
+
+document.write("<h2> Arrow Function with Rest Parameter </h2><br>")
+// arrow function can't called up function and not line break.
+var arrowfn = (a,...argu) => 
+{
+  document.write(a + " " + argu);
+};
+
+arrowfn(786, 105, 66);
+
+document.write("<h2> Arrow function </h2> <br>")
+ var arfn = a =>
+ {
+   document.write(a + "<br>");
+   document.write("H~A jutt <br>");
+ }
+
+arfn(105);
+
+document.write("<h2>Short arrow function</h2> <br>");
+// if use return statement then used curely bracket if used one to more parameter then used return statement
+var myfunN = (c,d) => { return c + d; } 
+
+// var myfunN = c => c;
+
+document.write(myfunN(30, 20));
+
+document.write("<h2>Immediately_Invoked_Function_Expression(IIFE) </h2> <br>");
+// this function is used mostly local variable
+(function () { document.write("Hamid Ali jutt ")}) ();
+
+(function ()
+ { 
+  var n = 786;
+  document.write(n + "<br>");
+ 
+ }) ();
+
+document.write(" <h1> Factory Function </h1> <br>");
+// factory function is used to same thins used multiple then used factory function. first return function used not distance bracket
+function Mobiles(model_no) 
+{
+ return{
+   model: model_no,
+   memory: '4GB',
+   color: 'white',
+   price: function()
+   {
+    return "Price Rs. 15000";
+   }
+       }
+}
+
+var oppo = Mobiles('OPPO'); 
+document.write(oppo.model + " " + oppo.price( ) + "<br>");
+
+var vivo = Mobiles('VIVO'); 
+document.write(vivo.model + " " + vivo.memory + vivo.price( ) + "<br>");
+
+document.write("<h1>Check Properties Exist</h1> <br>");
+document.write("<h4>Type of Operater Method </h4> <br>");
+if(typeof vivo.model !== 'undefined')
+{
+  document.write("<h3>Available</h3> <br>");
+} 
+else
+{
+  document.write("Does not Exist <br>"); 
+}
+
+document.write("<h4>In Operater Method <br></h4>");
+// in operator used to key and object name
+if ('memory' in vivo)
+{
+  document.write("<h3>Available</h3> <br>");
+}
+else
+{
+  document.write("Doesnt Exist <br>");
+}
+
+document.write("<h1> hasOwnProperty Method </h1> <br>");
+// this method is used to check key exist
+if(vivo.hasOwnProperty('color'))
+{
+  document.write("<h3> Available </h3> <br>");
+}
+else
+{
+  document.write("Does'nt Exist <br>");
+}
+
+document.write("<h1> Constructor</h1> <br>");
+ // this keyword is used to new object create point
+
+function Phone(model_name)
+{
+  this.model = model_name;
+  this.price = function()
+  {
+    document.write(this.model + " Price Rs.3000 <br>");
+  }
+}
+// call function and create object
+var qmobile = new Phone('QMobile');
+    qmobile.price();
+
+    var lg = new Phone('LG');
+        lg.price();
+
+document.write("<h3> DoNe <h3>");
+
+	</script>
+	
+</body>
+</html>

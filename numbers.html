@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Numbers</title>
+</head>
+<body>
+<script type="text/javascript">
+// primitive method
+document.write("<h3>primitive method</h3> <br>");
+var a = 10; /* whole Numbers */
+var b = 20; /* whole Numbers */
+var d = 10.45; /*Decimal Number*/
+var e = 5e3; /*5000 5*10^3 exponent*/
+var ex = 34e-5; /*0.00034 exponent*/
+var str = "Hello"; /*String*/
+// document.write(a+b +" :Result <br>");
+document.write("Result : " + a + b + "<br>");
+document.write(typeof(a) + "<br>");
+document.write(a+ " " + d + " " + e + " " + ex + "<br>");
+document.write(a-str + " " + d-a + " " + e + " " + ex + "<br>");
+
+document.write("<h3>Constructor method</h3> <br>");
+var c = new Number(10);
+var cd = new Number(10.45);
+var ce = new Number(5e3);
+document.write(typeof(c) + "<br>");
+document.write(cd + "<br>");
+document.write(cd-ce + "<br>");
+document.write(ce + "<br>");
+
+document.write("Number with String <br>");
+// Number with string is used to plus number and string could no plus then concate and other opertor work proper minus, divive etc string and number then minus number in string value.
+
+// Nan property is stands for Not a Number the nan property is same as the number.Nan property. if use only  number 10, 20 for example legal number and if use number with string then called illegal number. Nan is not equl with string and number etc.
+document.write("<h3> Nan property method </h3> <br>");
+var strng = "A quick brown fox jumps over the lazy dog";
+var intgr = 105;
+document.write(strng-intgr + "<br>");
+document.write(isNaN(strng) + "<br>");
+document.write(isNaN(intgr) + "<br>");
+if(strng == NaN)
+{
+ document.write("Equal" + "<br>");
+}
+else
+{
+  document.write("Not Equal <br>");
+}
+// isNaN property
+document.write("isNan property method <br>");
+var strng = "A quick brown fox jumps over the lazy dog";
+var intgr = 105;
+document.write(strng-intgr + "<br>");
+document.write(isNaN(strng) + "<br>");
+document.write(isNaN(intgr) + "<br>");
+// is nan method convert string number into integer
+var xy = "786";
+if(isNaN(xy))
+{
+ document.write("Not Number" + "<br>");
+}
+else
+{
+  document.write("Legal Number <br>");
+}
+
+document.write("<h3>Infinity and negative Infinity</h3> <br>");
+document.write(5/0 + "<br>");
+document.write(-5/0 + "<br>");
+ document.write("<h1>DoNe </h1>")
+  </script>
+ </body>
+</html>

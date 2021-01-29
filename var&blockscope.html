@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Variable Scope</title>
+</head>
+<body>
+<script type="text/javascript">
+	document.write("<h2>Variable Scope</h2> <br>");
+	// Two types of variable scope first: Global Scope Two: Local scope
+	// Global variable accessbile anywhere. global variable call inside function and out side function and inside block
+	document.write("<h2>Global Variable</h2> <br>");
+
+	var g = "I am a Global variable";
+	function show()
+	{
+	 document.write(g + "<br>"); /*inside function */
+	}
+	show();
+	 document.write(g + "<br>"); /*outside function */
+  // local variable can called only function 
+  document.write("<h2> Local Variable</h2> <br>");
+  function disp()
+  {
+  	// local variable
+  	// var l = "I am a Local variable";
+  	// global variabel inside function
+  	l = "I am a Global variable";
+  	document.write(l + "<br>");
+  }
+  disp();
+  	document.write(l + "<br>");
+
+document.write("<h2> Nested function </h2> <br>");
+// inner function can access outer function but outer function can't access inner function
+
+document.write("Outer function <br>");
+ function Show()
+ {
+ 	var j = "J is a local variable of outer function";
+ 	document.write(j + "<br>");
+document.write("Inner function <br>");
+ 	function innerFun()
+ 	{
+ 	var i = "K is a local variable of inner function";
+ 	document.write(i + "<br>");
+ 	document.write(j + "<br>");
+ 	}
+ 	innerFun();
+
+ }
+ Show();
+
+	document.write("<h2>Block Statement </h2> <br>");
+// inside block variable call outside javascript if made variable var can called outside block if made varibale let then not called outside block
+if(true)
+ {
+ 	// var n = 105;
+ 	let n = 105;
+ 	document.write(n + "<br>");
+    document.write(l + "<br>");
+ }
+ 	// document.write(n + "<br>");
+
+ if(true)
+ {
+   document.write(g + "<br>");
+ }
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Class Function</title>
+</head>
+<body>
+	<script>
+    // class method in javascript and create properties with this word is a public properties and create private properites then create with var property
+
+    // constructor is used to create object and initializing  object created within a class. There is only one special method with the name "Constructor" in a class
+document.write("<h1> Class Declaration</h1>");
+
+  var Tablet = function(model_no, sprice)
+ {
+  this.model = model_no;
+  this.color = 'White';
+  this.price = 5000;
+  this.sp    = sprice;
+  this.sellingprice = function()
+  {
+      return(this.price +  this.sp);
+  }
+  this.data = function()
+   {
+    document.write("Model No: " + this.model + " Price: " + this.sellingprice() + "<br>");
+   }
+ }
+  var samsung = new Tablet('Galaxay', 20000);
+  var nokia   = new Tablet('Asha', 15000);
+  nokia.data();
+
+  document.write("Access private properites with public method <br>");
+
+ var laptop = function(model_no, sprice)
+ {
+  this.model = model_no;
+  this.color = 'White';
+  var price = 5000;
+  this.sp    = sprice;
+  this.sellingprice = function()
+  {
+      return(price);
+  }
+  
+ }
+  var samsung = new laptop('Galaxay', 20000);
+document.write(samsung.sellingprice() + "<br>");
+
+// Class Declaration
+ class Mobile
+{
+ constructor()
+  {
+  	// Instance member
+  	   this.a = 12;
+  	this.show = function() 
+  	{
+  		return "Instance Member";
+  	}
+  }
+  // Prototype Member
+   display ()
+   {
+     return "Prototype Member";
+   }
+}
+
+// Default Constructor
+class Phone
+{
+	display()
+	{
+     return "Default Constructor Class";
+	}
+}
+
+var vivo = new Phone();
+document.write(vivo.display() + "<br>");
+
+var nokia = new Mobile();
+document.write(nokia.a + "<br>");
+document.write(nokia.show() + "<br>");
+document.write(nokia.display() + "<br>");
+
+// // Parameter constructor
+class Cell 
+{
+ constructor(model_no, color)
+  {
+  	   this.model = model_no;
+  	   this.clr = color;
+  }
+   show ()
+   {
+     return this.model + " Model No: S1 " + " Model Color :" + this.clr;
+   }
+}
+
+var nokia = new Cell('Nokia', 'Black');
+var galxay  = new Cell('Galaxay', 'white');
+document.write(nokia.show() + "<br>");
+document.write(galxay.show());
+document.write(nokia.a + "<br>");
+document.write(nokia.show() + "<br>");
+
+document.write("<h1>Class Expression </h1><br>");
+
+var desktop = class  
+{
+ constructor(model_no, color)
+  {
+       this.model = model_no;
+       this.clr = color;
+  }
+   show ()
+   {
+     return this.model + " Model No: Dell " + " Model Color :" + this.clr;
+   }
+}
+
+var dell = new desktop('Dell', 'Black');
+var hp  = new desktop('HP', 'white');
+document.write(dell.show() + "<br>");
+document.write(hp.show() + "<br>");
+
+  document.write("<h3>DoNe</h3>");
+	</script>
+
+</body>
+</html>

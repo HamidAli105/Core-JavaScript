@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date and Time Object</title>
+</head>
+<body>
+  
+	<script type="text/javascript">
+		document.write("<h2>Date and  Time </h2>");
+		document.write("<h4>One way to create date</h4> <br>");
+		// create current date and time with  object method
+		var tarikh = new Date();
+		document.write(tarikh + "<br>");
+
+		document.write("<h4>Two way to create date</h4> <br>");
+		// milli seconds date time
+		var tarikh1 = new Date(1530867166586);
+		document.write(tarikh1 + "<br>");
+       
+        document.write("<h4>Three way to create date</h4> <br>");
+        var tarikh2 = new Date(2020, 6, 18, 11, 56, 30, 0);
+        var tarikh3 = new Date(2020, 6, 18, 11, 56, 30);
+        var tarikh4 = new Date(2020, 6, 18, 11, 56);
+        var tarikh5 = new Date(2020, 6, 18, 11);
+        var tarikh6 = new Date(2020, 6, 18);
+        var tarikh7 = new Date(2020, 6);
+        document.write(tarikh2 + "<br>");
+        document.write(tarikh3 + "<br>");
+        document.write(tarikh4 + "<br>");
+        document.write(tarikh5 + "<br>");
+        document.write(tarikh6 + "<br>");
+        document.write(tarikh7 + "<br>");
+
+        document.write("<h4>Four way to create date</h4> <br>");
+        // create date string method three types of date ISO, Short date and long date.
+        document.write("ISO Date way <br>");
+        var tarikh8 = new Date("2020-06");
+        var tarikh9 = new Date("2020");
+        var tarikh10 = new Date("2020-06-21T12:00:00-06:30");
+        document.write(tarikh8 + "<br>");
+        document.write(tarikh9 + "<br>");
+        document.write(tarikh10 + "<br>");
+
+        document.write("Short Date way <br>");
+        var tarikh11 = new Date("06-18-2020");
+        document.write(tarikh11 + "<br>");
+
+        document.write("Long Date way <br>");
+        var tarikh12 = new Date("June 18 2020");
+        document.write(tarikh12 + "<br>");
+
+        document.write("<h1>Set Date Method </h1><br>");
+        // Day as number 1-31
+        // Hours as number 0- 23
+        // Month as number 0-11 Ex = 0 = jan
+        // Week day as number 0 -6 Ex= 0 = Sun
+        // current date and time
+        var tarikh13 = new Date ();
+
+        tarikh13.setHours(22);
+        document.write(tarikh13 + "<br>");
+
+        tarikh13.setMinutes(56);
+        document.write(tarikh13 + "<br>");
+
+        tarikh13.setSeconds(40);
+        document.write(tarikh13 + "<br>");
+        
+        tarikh13.setDate(26);
+        document.write(tarikh13 + "<br>");
+
+        tarikh13.setMonth(22);
+        document.write(tarikh13 + "<br>");
+
+        tarikh13.setFullYear(2022);
+        document.write(tarikh13 + "<br>");
+
+        tarikh13.setFullYear(2023, 3, 5);
+        document.write(tarikh13 + "<br>");
+     
+        document.write("<h1>Get Date Method </h1><br>");
+
+        var tarikh14 = new Date();
+        document.write("<h4>Get Date Method One</h4><br>");
+       document.write("Hours: " + tarikh14.getHours() + "<br>");
+       document.write("Minutes: " + tarikh14.getMinutes() + "<br>");
+       document.write("Seconds: " + tarikh14.getSeconds() + "<br>");
+       document.write("Date: " + tarikh14.getDate() + "<br>");
+       document.write("Month: " + tarikh14.getMonth() + "<br>");
+       document.write("Year: " + tarikh14.getFullYear() + "<br>");
+       document.write("Day: " + tarikh14.getDay() + "<br>");
+
+       document.write("<h4>Get Date Method Two</h4>");
+       var tarikh15 = new Date();
+       var month = tarikh15.getMonth();
+       var day = tarikh15.getDay();
+       document.write(getMonthName(month) + "<br>");
+       document.write(getDayName(day) + "<br>");
+
+       function getMonthName(monthnumber) 
+       {
+         var monthname = ["january","February","March","April","May","June","July","August", "September","October","November","December"];
+          return monthname[monthnumber];	
+       }
+
+       function getDayName(daynumber) 
+       {
+         var dayname = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          return dayname[daynumber];	
+       } 
+
+       document.write("<h4> Date Format</h4>");
+       var tarikh16 = new Date();
+       document.write(formatDate(tarikh16)	+ "<br>");
+
+       function formatDate(pd)
+       {
+       	var date = pd.getDate();
+       	var month = pd.getMonth();
+       	month++;
+       	var year = pd.getFullYear();
+       	return date + " / " + month + " / " + year;
+       }
+
+       document.write("<h4> Time Format</h4>");
+       var tarikh17 = new Date();
+       document.write(formatTime(tarikh17)	+ "<br>");
+
+       function formatTime(ft)
+       {
+       	var hour = ft.getHours();
+       	var minte = ft.getMinutes();
+       	minte++;
+       	var second = ft.getSeconds();
+       	return hour + " / " + minte + " / " + second;
+       }
+
+       document.write("<h4>Convert Date into String</h4><br>");
+       var tarikh18 = new Date();
+       document.write(tarikh18.toString() + "<br>");
+       document.write(tarikh18.toUTCString() + "<br>");
+       document.write(tarikh18.toGMTString() + "<br>");
+      
+    document.write("<h1>DoNe</h1>");
+  </script>
+ </body>
+</html>

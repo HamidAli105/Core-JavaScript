@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Method</title>
+</head>
+<body>
+
+<script type="text/javascript">
+  // String is a group of character if use number in under double quote is used to string
+
+   // Primitive Method is used for string. Primitive is execution fast and mostly use method
+	document.write("<h1>Primitive  String</h1><br>");
+	// String Method
+	// Double quote string
+   document.write("Hamid Ali" + "<br>");
+   // singlw quote string 
+   document.write('Saim Jutt' + "<br>");
+   // Back quote
+   document.write(`Yasir jutt` + "<br>");
+   // Numeric String
+   document.write("12345" + "<br>");
+   document.write(typeof("12345") + "<br>");
+
+   // Constructor Method Object  String
+   document.write("<h1>Constructor String</h1> <br>");
+   var str = new String ("M.Qasim");
+   document.write(typeof(str) + "<br>");
+   // Single and double quote 
+   document.write('I am "Good" Boy' + "<br>");
+   document.write("I am 'Good' Boy'" + "<br>");
+
+   // String Concatenation method is used to differenct string combine one String
+   document.write("<h1>String Concatenation </h1> <br>");
+   // Plus + method 
+   document.write("<h4>Plus Method </h4><br>");
+  var str1 = "Web Developer";
+  var str2 = "Back end Developer";
+  var str3 = str1 + " " + str2;
+  document.write(str1 + " " + str2 + " <br>");
+  document.write(str3 + "<br>");
+
+  // Concat Method ()
+  document.write(" <h4>Concat Method</h4> <br>");
+  // Method one concat metho
+  var new_str = "Hello ".concat("World ", "Agency Stack ");
+  document.write(new_str.concat("<br>"));
+  // Method two concat method
+  var firstname = "Hamid";
+  var lastname = "Ali";
+  var nickname = "Jutt";
+  var fullname = firstname.concat(lastname, nickname, "Ask Something");
+  document.write(fullname.concat("<br>"));
+  
+  // Escap Notation
+  document.write("<h1>Escap Notation</h1> <br>");
+  console.log("FirstmoveDigital \n Agency Stack <br>");
+  console.log("FirstmoveDigital \t Agency Stack <br>");
+  console.log(`FirstmoveDigital 
+    Agency Stack <br>`);
+  // back tick aur multi line string doube quote not used multi space line string back tick is used double line string
+
+  // String Property
+  document.write("<h1>String property Method</h1> <br>");
+  document.write("Length property <br>"); 
+  var lp = "A quick brown fox jumps over the lazy dog";
+  document.write(lp.length + "<br>");
+  
+  document.write("chatAT Property <br>");
+ // charAt property is used get specific text position.
+  var chrtp = "A quick brown fox jumps over the lazy dog";
+  document.write(chrtp.charAt(34) + "<br>");
+  
+  document.write("charCodeAt Method <br>");
+  // charCodeAt return the unicode of the chr at specified index in a string
+  var lp = "A quick brown fox jumps over the lazy dog";
+  document.write(lp.charCodeAt(2) + "<br>");
+
+  document.write("toUpperCase Method <br>");
+  // toUpperCase method is used all string value convert inti uppercase
+  var str4 = "A quick brown fox jumps over the lazy dog";
+  document.write(str4.toUpperCase() + "<br>");
+
+  document.write("toLowerCase Method <br>");
+  // toLowerCase method is used all string value convert inti lowercase
+  var str5 = "A quick brown fox jumps over the lazy dog";
+  document.write(str5.toLowerCase() + "<br>");
+  
+  document.write("trim Method <br>");
+ // trim() method is used remove white space both side in string start and end.
+  var trm = "      A quick brown fox jumps over the lazy dog     ";
+  console.log(trm.trim() + "<br>");
+  document.write(trm.trim() + "<br>");
+  
+  document.write("replace Method <br>");
+  // replace method () is used to replace specified value in another value in a string replace () only the first match
+   var rplce ="Agency Stack";
+   document.write(rplce.replace("Agency Stack", "First Move Digital") + "<br>");
+   
+   document.write("split Method <br>");
+    //split method is used to string convert into arrays
+    var splt ="Hi guys Lets Learn javascript";
+    document.write(splt .split(" ") + "<br>");
+    console.log(splt .split(" "));
+    
+    //indexOf method is text position in numeric value show in browser
+    document.write("Index Of Method <br>");
+    var str8 ="Hi guys Lets Learn javascript";
+    document.write(str8 .indexOf("e") + "<br>"); 
+    document.write(str8 .indexOf("e", 10) + "<br>"); 
+    document.write(str8 .indexOf("Lets") + "<br>"); 
+   
+   document.write("search Method <br>");
+    // Search method() is adavance indexOf methd is not use 2nd optional parameter 
+    var srch = "Hi guys Lets Learn javascript Online";
+    document.write(srch.search("e") + "<br>");  
+    document.write(srch.search("Learn") + "<br>");  
+    
+    document.write("Slice Method <br>");
+    // Slice Method() is used to extract part of text to show in browser is accept negative value
+    var slce = "A Quick Brown Fox Jumps Over The Lazy Dog.";
+    document.write(slce.slice(7, 14) + "<br>");
+    
+    document.write("Substring Method <br>");
+    // Substring Method() is used to desire to show in browser is not accept negative value
+    var str10 = "A Quick Brown Fox Jumps Over The Lazy Dog.";
+    document.write(str10.substring(7, 20) + "<br>");
+    
+    // substr method() is used starting and ending charcter 
+    document.write("Substr Method <br>");
+    var str10 = "A Quick Brown Fox Jumps Over The Lazy Dog.";
+    document.write(str10.substr(7, 20) + "<br>");
+ document.write("<h1>DoNe</h1>");
+</script>
+
+</body>
+</html>

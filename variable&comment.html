@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<lang="en">
+<html>
+<head>
+<title> Html and JavaScript</title>
+   
+	
+ </head>
+ <body>
+ <h1> Use of javascript with html </h1>
+ <h2> Online Learn JavaScript</h2>
+ <h2> Variable Declarning</h2>
+ <script>
+ var number;
+ //use single line comment
+ //number =105
+ var number =105+"<br>";
+ document.write(number);
+ 
+ var name = "Hamid Ali"+"<br>";
+ document.write(name);
+ 
+ var decimal = 125.999+"<br>";
+ document.write(decimal);
+ 
+ var bolen = true+"<br>";
+ document.write(bolen);
+ //mutliple variable
+ var x =105, y =786, z =13+"<br>";
+ document.write(x,y,z);
+ 
+ var fname = "Hamid", lname = "Ali", nickname ="H~A"+"<br>";
+ document.write(fname,lname,nickname);
+ //re decrlaring variable and multi line comment
+ /*var firstName = "Hamid"+"<br>";
+ firstName;
+ document.write(firstName);
+ //replace variable
+ var firstName = "Hamid"+"<br>";
+ firstName = "Hamid Ali";
+ document.write(firstName); */
+
+ //block Scop
+ if (true){
+ //two way to create variable
+ //one way create var is access inner block and outer show
+ //two way create let is access inner block
+   var x = 20;
+   let y = 20;
+   document.write(x + "<br>");
+   document.write(y + "<br>");
+ }
+ 
+ var a = 10;
+   document.write(a + " <br>" + b);
+   var b = 20;
+   document.write(a + "<br> " + b);
+ 
+ </script>
+
+ </body>
+</html>

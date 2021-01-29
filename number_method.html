@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Number Method</title>
+</head>
+<body>
+<script type="text/javascript">
+    document.write("<h3>toString Method</h3> <br>");
+	// toString method is used hexamal dexmal and numeric value
+	var a = 10;
+	document.write(typeof(a) + "<br>");
+    document.write(typeof(a.toString()) + "<br>");
+	document.write(a.toString() + "<br>");
+	document.write(a.toString(2) + "<br>");  /*Binary */
+	document.write(a.toString(8) + "<br>");  /*Hexmal */
+	document.write(a.toString(16) + "<br>"); /*Dexmal */
+    
+    document.write("<h3>to exceptional </h3> <br>");
+    var ab = 58975.98745;
+    document.write(a.toExponential() + "<br>");
+    document.write(a.toExponential(2) + "<br>");
+    document.write(a.toExponential(4) + "<br>");
+    
+	// toFixed is used to show value in browser
+	document.write("<h3>toFixed Method</h3> <br>");
+	var i = 5748.484848;
+	document.write(i.toFixed() + "<br>");
+	document.write(i.toFixed(2) + "<br>");
+	document.write(i.toFixed(4) + "<br>");
+	document.write(i.toFixed(8) + "<br>");
+
+	// toPrecision is used then show complete value in browser and desire value
+	document.write("<h3></h3>toPrecision method</h3> <br>");
+	var b = 5748.484848; 
+	document.write(i.toPrecision() + "<br>");
+	document.write(i.toPrecision(4) + "<br>");
+	document.write(i.toPrecision(9) + "<br>");
+
+    // Number.isSafeInteger method determine whether a value an integer.This method return true if the value is the type of number and integer, Otherwise return it false.s
+    document.write("<h3>Number.isInteger</h3> <br>");
+    document.write(Number.isInteger() + "<br>");
+    document.write(Number.isInteger(100) + "<br>");
+    document.write(Number.isInteger(-100) + "<br>");
+    document.write(Number.isInteger(100.45) + "<br>");
+    document.write(Number.isInteger(200-100) + "<br>");
+    document.write(Number.isInteger(0.1) + "<br>");
+    document.write(Number.isInteger("100") + "<br>");
+    document.write(Number.isInteger("Hello") + "<br>");
+
+     // Number.isSafeInteger
+    document.write("<h3>Number.isSafeInteger </h3> <br>");
+    document.write(Number.isSafeInteger() + "<br>");
+    document.write(Number.isSafeInteger(100) + "<br>");
+    document.write(Number.isSafeInteger(-100) + "<br>");
+    document.write(Number.isSafeInteger(100.45) + "<br>");
+    document.write(Number.isSafeInteger(200-100) + "<br>");
+    document.write(Number.isSafeInteger(0.1) + "<br>");
+    document.write(Number.isSafeInteger(0^1) + "<br>");
+    document.write(Number.isSafeInteger("100") + "<br>");
+    document.write(Number.isSafeInteger(47548375043754754574357475475475549) + "<br>");
+    
+    // Number method 
+    document.write("<h3>Number Method </h3><br>");
+    var a = true;
+    var b = false;
+    var c = 100;
+    var d = "100";
+    var e = "Hello";
+    var f = new Date();
+    document.write("True: " + Number(a) + "<br>");
+    document.write("False: " + Number(b) + "<br>");
+    document.write("100: " + Number(c) + "<br>");
+    document.write("'100:' " + Number(d) + "<br>");
+    document.write("Hello: " + Number(e) + "<br>");
+    document.write("Date: " + Number(f) + "<br>");
+    
+    // Parse method
+    document.write("<h3>Parse Method </h3><br>");
+    document.write(parseInt("10") + "<br>");
+    document.write(parseInt("12.00") + "<br>");
+    document.write(parseInt("15.45") + "<br>");
+    document.write(parseInt("10 20 30") + "<br>");
+    document.write(parseInt(" 90 ") + "<br>");
+    document.write(parseInt("10 years") + "<br>");
+    document.write(parseInt("years 10") + "<br>");
+    document.write(parseInt("020") + "<br>");
+    document.write(parseInt("12", 8) + "<br>");
+    // 12 hex = 18 decimal
+    document.write(parseInt("12", 8) + "<br>");
+    document.write(parseInt("0x12") + "<br>");
+    // 10 hex = 16deci
+    document.write(parseInt("10", 16) + "<br>");
+    
+    // ParseFloat
+    document.write("<h3>ParseFloat Method</h3> <br>");
+    document.write(parseFloat("10") + "<br>");
+    document.write(parseFloat("12.00") + "<br>");
+    document.write(parseFloat("15.45") + "<br>");
+    document.write(parseFloat("10 20 30") + "<br>");
+    document.write(parseFloat(" 90 ") + "<br>");
+    document.write(parseFloat("10 years") + "<br>");
+    document.write(parseFloat("years 10") + "<br>");
+    document.write(parseFloat("020") + "<br>");
+    document.write(parseFloat("12", 8) + "<br>");
+
+    // Math () Method
+    document.write("<h3>Math Method</h3> <br>");
+    document.write(Math.PI + "<br>");
+    document.write(Math.sqrt(64) + "<br>");
+    document.write(Math.abs(-64) + "<br>");
+    document.write(Math.abs(null) + "<br>");
+    document.write(Math.pow(2, 3) + "<br>");
+    document.write(Math.trunc(12.564) + "<br>");
+    
+    // Min and Max Method
+    document.write("<h3>Min and Max Method</h3> <br>");
+    document.write(Math.min(12,33,444,566,777) + "<br>");
+    document.write(Math.max(12,33,444,566,777) + "<br>");
+    
+    // floor method () is used to negative increase  value
+    document.write("floor Method <br>");
+    document.write(Math.floor(2.1) + "<br>");
+    document.write(Math.floor(6.65) + "<br>");
+    document.write(Math.floor(0.4) + "<br>");
+    document.write(Math.floor(-2.1) + "<br>");
+    document.write(Math.floor(-6.65) + "<br>");
+    
+    // round method is increase value
+     document.write("<h3>round Method </h3><br>");
+    document.write(Math.round(2.1) + "<br>");
+    document.write(Math.round(6.65) + "<br>");
+    document.write(Math.round(0.4) + "<br>");
+    document.write(Math.round(-2.1) + "<br>");
+    document.write(Math.round(-6.65) + "<br>");
+
+    // Random method ()
+    document.write("<h3>Random Method</h3> <br>");
+    var x = Math.floor((Math.random() * 100))
+    document.write(Math.random()*100 + 1 + "<br>");
+    document.write(x + "<br>");
+    document.write("<h1>DoNe</h1>");
+</script>
+</body>
+</html>

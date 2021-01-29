@@ -1,0 +1,1 @@
+document.write("External Head and Body tag practice of javascript");

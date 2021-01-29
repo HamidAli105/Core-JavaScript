@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<lang="en">
+<html>
+<head>
+<title> Html and JavaScript</title>
+
+ </head>
+ <body>
+
+     <h1> Use of javascript with html </h1>
+ <h2> Online Learn JavaScript</h2>
+ <h3> All loops structure show on below</h3>
+ <!--use of body javascript tag-->
+ <script> 
+ document.write("<h1>For loop Method </h1> <br>");
+ //one method of for loops
+    for (x = 0; x <= 5; x++) {
+
+    document.write("For loop Method One Number: " + x +     "<br>");
+} 
+{
+document.write ("For loop is stop <br>");
+}
+
+document.write("<h1>Four Loop Method Two</h1> <br>");
+ var x = 5;
+for (; x>= 0; x--) {
+
+    document.write("For loop Method Two Number: " + x +"<br>");
+} 
+{
+document.write ("For loop is stop <br>");
+}
+
+//three method of for loop
+// this method first increase value and then show output value in browser
+document.write("<h1>Four loop Method Three</h1><br>");
+ var x = 0;
+for (; x<= 8;) {
+     x++;
+    document.write("For loop Method Three Number: "+ x +"<br>");
+} 
+{
+document.write ("For loop is stop <br>");
+}
+
+document.write("<h1>Four Loop Method Four </h1><br>");
+
+var x = 0;
+for (; x<= 8;) {
+    document.write("For loop Method Four Number: "+ x +"<br>");
+     x++;
+} 
+{
+document.write ("For loop is stop <br>");
+}
+	
+// if empty intilization and condition then show true value
+document.write("<h1>Break function</h1> <br>");
+document.write("Break function Method One <br>");
+var x=0;
+for (; ; x++)
+{
+	if(x==10)
+	{
+		break;
+	}
+	document.write(x + "<br>");
+}
+document.write("Rest of the Code <br>");
+
+document.write("<h1>Break function Method Two </h1> <br>");
+var x=0;
+for (; x<=10; x++)
+{
+	if(x==8)
+	{
+		break;
+	}
+	document.write(x + "<br>");
+}
+document.write("Rest of the Code <br>");
+
+document.write("<h1>Use Continue Method</h1><br>");
+var x=0;
+for (; x<=10; x++)
+{
+	if(x==5)
+	{
+		continue;
+	}
+	document.write(x + "<br>");
+}
+document.write("Rest of the Code <br>");
+
+document.write("<h1> Nested for loop</h1> <br>");
+// Nested for loop is used to for loop under for loop
+// //nested for loop structure
+
+ for (o =0; o<=2; o++)
+    {
+   document.write("<h1> Outer for Loop </h1>")
+	 document.write(o + "<br>");
+	 for (i =0; i<=8; i++) /*inner for loop */
+	 {
+   document.write("<h4> Inner for Loop </h4>")
+	 document.write(i + "<br>");
+	 }
+	}
+	document.write("End For Loop JavaScript <br>");
+	
+ 	document.write("<h1>Start While Loop JavaScript</h1> <br>");
+ // while loop is executed till given condition is true
+ document.write("<h2>While Loop Method One</h2> <br>");
+ var y = 0;
+ while(y<5)
+ {
+ 	document.write(y + "<br>");
+ 	y++;
+ 	document.write("<br>");
+ }
+ 	document.write("Rest of the Code <br>");
+
+ document.write("<h2>While Loop Method Two </h2> <br>");
+ var z =0;
+ while(true)
+ {
+ 	if(z==5)
+ 	{
+ 		break;
+ 	}
+ 	document.write(z);
+    z++;
+    document.write("<br>");
+ }
+ 
+ document.write("<h1>Nested While Loop<h1> <br>");
+ var n =0;
+ while(n<3)
+ {
+ 	document.write("<b> Outer Loop </b> <br>")
+ 	document.write(n + "<br>");
+ 	n++;
+ 	var j =0;
+ 	while(j<5)
+ 	{
+ 		document.write("<b> Inner Loop </b>")
+ 		document.write(j +"<br>")
+ 		j++;
+ 	}
+ }
+
+ document.write("<h1> Do while loop</h1> <br>");
+// do while is used to first execute then check conditio 
+document.write("Do while Method One <br>");
+var z = 0;
+do
+{
+	document.write(z + "<br>");
+	z++;
+} while(z<5);
+
+document.write("Do while Method Two <br>");
+var z = 0;
+do
+{
+	if(z==3)
+	{
+     break;
+	}
+	document.write(z + "<br>");
+	z++;
+} while(true);
+
+document.write("<h1> Nested do while loop<h1> <br>");
+var m =0;
+do
+{
+	document.write("<b> Outer Loop </b> <br>");
+	document.write(m +"<br>");
+	m++;
+	var n =0;
+	do
+	{
+		document.write("<i> Inner Loop </i> <br>");
+		document.write(n + "<br>");
+		n++;
+	}
+	while(n<3);
+}while(m<2);
+
+document.write("<h1>For in Loop Method </h1> </br>");
+// use for loop for get object property
+	function Mobiles(model_no) 
+   {
+	 
+		this.model = model_no;
+		this.color = 'white';
+		this.ram = '4GB';
+		this.price = function()
+		{
+			document.write (this.model + " Price Rs. 15000 <br>");
+
+        }
+   }
+   
+var oppo = new Mobiles('OPPO'); 
+document.write("Method One get value properites with for loop <br>");
+
+// four loop method get data instance and prototype both 
+for (var specs in oppo)
+{
+  if(typeof oppo[specs] !== 'function')
+    {
+	document.write(specs + " " + oppo[specs] + " " /* + oppo[obj] */ +"<br>");
+
+    }
+}
+
+document.write("Method Two get value properites with Object keys <br>");
+// simple get instance value
+document.write(Object.keys(oppo) + "<br>");
+
+ document.write("<h2>DoNe </h2>");
+	</script>
+	
+	 </body>
+</html>

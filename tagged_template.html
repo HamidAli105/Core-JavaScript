@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tagged Template</title>
+	<style type="text/css">
+   .center{
+   	text-align: center;
+   }
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		// Tagged Template
+ document.write("<h1>Tagged Template</h1> <br>");
+ // There are five movies tickets each Rs: 200 and if you buy five tickets get discount Rs: 50 Each
+ // There are five movies tickets each Rs: 200 if you buy less then five tickets get discount Rs: 0 Each
+ var noofticket = 5;
+ var buyticket  = 6;
+ var eachprice  = 200;
+ var disprice  = 50;
+ 
+ // One method create function with parameter
+ // function ticket(theory, nticket, eprice, bticket, dprice) 
+ // {
+ //   if (bticket < 5)
+ //      {
+ //       dprice = 0;
+ //       return `${theory[0]} ${nticket} ${theory[1]} ${eprice} ${theory[2]} ${bticket}
+ //               ${theory[3]} ${dprice} ${theory[4]}`
+ //      }
+ //      else
+ //      {
+ //      return `${theory[0]} ${nticket} ${theory[1]} ${eprice} ${theory[2]} ${bticket}
+ //               ${theory[3]} ${dprice} ${theory[4]}`
+ //      }
+ //  return theory[0];
+ //  return bprice;
+ // }
+
+ // Two method create function with rest parameter
+ function ticket(theory, ...rest) 
+ {
+   if (rest[2] < 5)
+      {
+       rest[3] = 0;
+       return `${theory[0]} ${rest[0]} ${theory[1]} ${rest[1]} ${theory[2]} ${rest[2]}
+               ${theory[3]} ${rest[3]} ${theory[4]}`
+      }else
+      {
+      return `${theory[0]} ${nticket} ${theory[1]} ${eprice} ${theory[2]} ${bticket}
+               ${theory[3]} ${dprice} ${theory[4]}`
+      }
+  return theory[0];
+  return bprice;
+ }
+
+ document.write(`Ther are ${noofticket} movie ticket each Rs ${eachprice} and if you buy ${buyticket} ticket get discount Rs ${disprice} Each <br>`);
+
+ console.log(`Ther are ${noofticket} movie ticket each Rs ${eachprice} and if you buy ${buyticket} ticket get discount Rs ${disprice} Each <br>`);
+
+ // document.write(ticket `Ther are ${noofticket} movie ticket each Rs ${eachprice} and if you buy ${buyticket} ticket get discount Rs ${disprice} Each <br>`);
+
+ // console.log(ticket `Ther are ${noofticket} movie ticket each Rs ${eachprice} and if you buy ${buyticket} ticket get discount Rs ${disprice} Each <br>`);
+ document.write("<h3>DoNe</h3>");
+	</script>
+ </body>
+</html>

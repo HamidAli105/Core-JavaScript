@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Class Inheritance </title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+document.write("<h1> Inheritance Prototype Object</h1> <br>");
+document.write("<h1> One Method</h1> <br>");
+
+// function of inheritance
+function extend(child, parent)
+{
+ child.prototype = Object.create(parent.prototype);
+ child.prototype.constructor = child;
+}
+
+// Super Class
+var Mobile = function()
+{
+
+}
+
+// Prototype Method
+Mobile.prototype.getModel = function()
+{
+  return this.model;
+}
+// multi level inheritance
+Mobile.prototype.z = 30;
+// Sub Class
+var Samsung = function(model, price)
+{
+	this.model = model;
+	this.price = price; 
+	Mobile.call(this);
+	this.b = 20;
+}
+
+// Sub Class
+var Lenove = function (model)
+{
+	this.model = model;
+	Mobile.call(this);
+	this.c = 100;
+}
+
+// Call inheritance function
+extend(Samsung, Mobile);
+extend(Lenove, Mobile);
+
+// Inheritance
+// Samsung.prototype = Object.create(Mobile.prototype);
+// Samsung.prototype.constructor = Samsung;
+
+// Lenove.prototype = Object.create(Mobile.prototype);
+
+Samsung.prototype.getPrice = function()
+{
+	return this.price;
+}
+
+ document.write("Called MultiLevel Inheritance <br>");
+
+ var m = new Mobile();
+ var s = new Samsung('Galaxy', 20000);
+ var l = new Lenove('Lenove S8');
+ document.write("Mobile Object :" + m.z + "<br>");
+ document.write("Samsung Object :" + s.b + "<br>");
+ document.write("Lenove Object :" + l.c + "<br>");
+
+// Call function and create object
+var galaxy = new Samsung('Galaxy', 15000);
+console.log(galaxy.getModel());
+
+ console.log(galaxy.getPrice());
+
+var phab2 = new Lenove('Phab 2');
+console.log(phab2.getModel());
+
+document.write("<h1>Two Method</h1> <br>");
+// Super class
+ var Phone = function(number)
+ {
+ 	this.number = number;
+ }
+// Prototype method
+Phone.prototype.getNumber = function()
+{
+	return this.number;
+	return "Super Class Method";
+}
+// Sub Class
+var Oppo = function(model, rupees)
+{
+	// call method is used to call another property use in another function two parameter required
+    Phone.call(this, model)
+	this.rupees = rupees;
+}
+
+// Inheritance method
+Oppo.prototype = Object.create(Phone.prototype);
+Oppo.prototype.constructor = Oppo;
+
+var x105 = new Oppo('X 105', 14000);
+console.log(x105.getNumber());
+
+Oppo.prototype.getNumber = function()
+{
+	return "Sub Class Method";
+}
+
+// creating object of sub class Oppo
+var x786 = new Oppo();
+var phn = new Phone(13);
+document.write(x786.getNumber() + "<br>");
+document.write(phn.getNumber() + "<br>");
+
+document.write("<h1>Composition or Mixins in Javascript</h1>");
+
+// Mixin Function
+function mixin (target, ...sources)
+{
+	Object.assign(target, ...sources);
+}
+
+var eating = 
+{
+	eat: function()
+	{
+		return "I can Eat <br>";
+	}
+}
+
+var walking = 
+{
+	walk: function()
+	{
+		return "I can Walk <br>";
+	}
+}
+
+var talking = 
+{
+	talk: function()
+	{
+		return "I can Talk <br>";
+	}
+}
+
+var starting = 
+{
+	start: function()
+	{
+		return "RoboCop Start";
+	}
+}
+
+// Humain Class
+var Humain = function()
+{
+
+}
+
+// Humain Class
+var Robot = function()
+{
+
+}
+
+// Compositing feature to Humain
+Object.assign(Humain.prototype, eating, walking, talking);
+
+// call mixin function
+mixin(Humain.prototype, eating, walking, talking);
+
+// Compositing feature to Robot
+Object.assign(Robot.prototype, walking, talking, starting);
+
+// call mixin function
+mixin(Robot.prototype, walking, talking, starting);
+
+var Rahul = new Humain();
+
+var RoboCop = new Robot();
+
+// first create empty bracket for assign source feature assign empty bracket
+document.write("Humain Mixins <br>");
+var Rahul = Object.assign({}, eating, walking, talking);
+document.write(Rahul.eat() + Rahul.walk() + Rahul.talk() + "<br>");
+
+document.write("Robot Mixins <br>");
+var RoboCop = Object.assign({}, walking, talking, starting);
+document.write(RoboCop.walk() + RoboCop.talk() +  RoboCop.start() + 
+	"<br>");
+
+document.write("<h1> MultiLevel Level Inheritance <br> </h1>");
+document.write("<h1> Class Inheritance <br> </h1>");
+
+// The extends keyword is used in class declaration or class expression to create a class which is a child of another class.
+
+class Father
+{
+	// showFMoney()
+	// {
+	// 	return "Father Money <br>";
+	// }
+
+	constructor(money)
+	{
+		this.Fmoney = money;
+	}
+	showFMoney()
+	{
+      return this.Fmoney + " Father Money";
+	}
+}
+
+class Son extends Father
+{
+	constructor(money)
+	{
+		// if use super function and with create this. fn or var below
+      super(money);
+      this.a = 105;
+	}
+
+	showSMoney()
+	{
+	  return "Son Money";
+	}
+}
+
+class GrandSon extends Son
+{
+  showGMoney ()
+  {
+  	return "GrandSon Money";
+  }
+}
+
+var s = new Son(1000);
+var g = new GrandSon();
+document.write(s.showFMoney() + "<br>");
+document.write(s.showSMoney() + "<br>");
+
+// document.write(g.showFMoney() + "<br>");
+document.write(g.showSMoney() + "<br>");
+document.write(g.showGMoney() + "<br>");
+
+document.write("<h1>Method Overriding</h1> <br>");
+class abu
+{
+	show()
+	{
+		return "Super Class <br>";	
+	}
+}
+
+class beta extends abu
+{
+	show()
+	{
+		return "Sub Class <br>";	
+	}
+}
+
+var b = new beta();
+document.write(b.show() + "<br>");
+
+document.write("<h1>Static Method</h1> <br>");
+// static method is used to specific class method not create object for call method simply class and and . method name etc.
+class QMobile
+{
+ static disp()
+	{
+		return "Static Method <br>";	
+	}
+}
+
+document.write(QMobile.disp());
+
+document.write("<h1>DoNe</h1>");
+	</script>
+
+</body>
+</html>

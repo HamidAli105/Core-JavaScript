@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Object Arguments </title>
+</head>
+
+<body>
+<p>Creating a JavaScript Object.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+ <script>
+
+  var person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+};
+
+document.getElementById("demo").innerHTML =
+"Name: " + person.firstName + " / is " + person.age + " :years old.";
+
+  document.write("<h1>Creating Ways Object Literal</h1><br>");
+  var one = {};
+  one['Hamid'] = 786;
+ document.write("Object Literal Declare and Initial <br>");
+ var one = {Hamid: 105};
+
+ document.write("<h1>Crating Object Constructor</h1> <br>");
+ var two = new Object();
+
+ 
+  document.write("<h1>Object Method</h1> <br>")
+  document.write("One Method <br>");
+
+  // This method used space difference between two character only
+   var fees =
+   {
+    Hamid: 100,  /* object Properties */
+    Sumit: 200,
+    Rohan: 300,
+    "Super Man": 400,  
+    total:function(){return(100+200+300)} /* Object Method */
+   }
+
+   document.write(fees['total'] () + "<br>");
+   document.write(fees['Hamid']  + "<br>");
+   document.write(fees['Super Man']  + "<br>");
+   console.log(fees);
+  
+   document.write("<h1>Declaration and Initialization  of Object Literal</h1> <br>")
+
+   document.write("<h2>Using Object Literal </h2> <br>")
+   document.write("<h2>Declaration of object </h2> <br>")
+   document.write("Two Method <br>");
+   var fine = {};
+// . dot method property
+document.write(". Method Properties <br>");
+   fine.Hamid = 105;
+   fine.Mubshar = 786;
+   document.write(fine.Hamid + "<br>");
+
+document.write("Literal Method <br>");
+   fine['Aryan'] = 200;
+   fine['Azan'] = 300;
+   fine['Qasim'] = 100;
+   fine['Total'] = function() { return(300+200)}
+   
+   document.write(fine['Aryan'] + "<br>");
+   document.write(fine['Total']() + "<br>");
+   document.write(fine.Total() + "<br>");
+   
+   document.write("<h1>Declaration and Initialization  of Object Construct</h1> <br>")
+   var rupes = new Object();
+   rupes['Hamid']   = 786;
+   rupes['Saqib']   = 105;
+   rupes['Mubshar'] = 101;
+   rupes['Final'] =function(){ return (786+105)}
+   rupes.Hamza  = 113;
+   rupes.Kamran = 112;
+
+   document.write(rupes['Hamid'] + "<br>");
+   document.write(rupes.Saqib + "<br>");
+   document.write(rupes.Final() + "<br>");
+
+ document.write("<h1>Accessing Properties</h1>")
+ // square braket used distance two words and . method is not used two distance paragraph 
+ var access ={Rahul : 100, Qasim : 200, "Hamid Ali" : 300}
+  document.write(access['Qasim'] + "<br>");
+  document.write(access.Rahul + "<br>");
+  document.write(access['Hamid Ali'] + "<br>");
+  
+  document.write("<h1>Adding Properties Method</h1> <br>");
+  var student = {Hamid:"Well&Good", Ali:105}
+  document.write(student.Hamid +"<br>");
+  student.Qasim = 66;
+  student.azan = "jutt";
+  student.show = function(){ return 786+105}
+  
+  document.write("<h1>Delete Properties </h1> <br>");
+   delete student.Ali;
+  document.write(student.Ali + "<br> " + student.Qasim + "<br>");
+  document.write(student.show() + "<br>");  
+  console.log(student);
+
+  document.write("<h1>Object Prototype Method </h1> <br>");
+  
+  function Person(first, last, age, eye) {
+  this.firstName = first;
+  this.lastName = last;
+  this.age = age;
+  this.eyeColor = eye;
+}
+
+
+
+var myFather = new Person("John", "Doe", 50, "blue");
+var myMother = new Person("Sally", "Rally", 48, "green");
+
+document.write("The age of my father is" + myFather.age);
+document.write("<h1>DoNe</h1>");
+ </script>
+
+
+
+</body>
+</html>

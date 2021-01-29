@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<lang="en">
+<html>
+<head>
+<title> Html and JavaScript</title>	
+ </head>
+ <body>
+
+     <h1> Use of javascript with html </h1>
+ <h2> Online Learn JavaScript</h2>
+ <h3> Decision if else elseif switch etc</h3>
+ <!--use of body javascript tag-->
+ 
+ <script type="text/javascript"> 
+    //if statement use method
+    document.write("If and else statement <br>");
+	var fruit = prompt("Enter your Favorite fruit name: ", "Write Favorite Fruit");
+	if(fruit == "Apple")
+	{
+	document.write("Your favorite fruit is: " + fruit + "<br>");
+     }
+     else
+     {
+     	document.write("Your Wrong Favorite Fruit <br>");
+     }
+    
+  var number = prompt("Enter Your Roll Number", "Enter Roll Number");
+	if (number == 105)
+	{
+	document.write("Your Roll Number of Class is: " + number +"<br>")
+	}
+	else
+	{
+		document.write("Wrong enter value <br>");
+	}
+
+	document.write("else if statement <br>");
+	var result = 50;
+	// var result = prompt("Enter Number: ");
+	if(result<=30)
+	  document.write("Fail <br>");
+	  else if(result <= 40)
+	  document.write("Pass <br>");
+	  else if(result <=60)
+	  document.write("Good <br>");
+	  else if (result <=80)
+	  document.write("Very Good <br>")
+	  else ("Well and Good <br>");
+  
+	var FirstName = "Hamid";
+	var LastName = "Ali";
+	//use logical operator and if else statement
+	if((FirstName == "Hamid") || (LastName == "Ali")){
+	document.write("This condition is true of and operator"+"<br>")
+	}
+
+	if((FirstName == "Hamid") && (LastName == "jutt"))
+	{
+	document.write("This condition is true of or operator" +  "<br>")
+	}
+	else
+	{
+	document.write("This condition is false and use of else statement: ")
+	}
+		
+	</script>
+ 
+ </body>
+</html>

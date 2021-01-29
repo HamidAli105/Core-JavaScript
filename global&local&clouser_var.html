@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Global and Local Variable</title>
+</head>
+
+<body>
+<script>
+
+	//Global Variable access anywhere
+/*	var g = "I am a global variable";
+	function show(){
+	document.write(g + "<br>");//inside function
+	}
+ //show();
+//document.write(g + "<br>");//outside function
+ if(true){
+  //document.write(g + "<br>");//inside function
+ }*/
+ 
+ //Local Variable access only inner function
+	
+/*	function disp(){
+	// if not use var then only alphabetic then call global variable
+	//var l = "I am a local variable";
+	  l = "I am a local variable";
+	document.write(l + "<br>");
+	}
+ disp();
+		document.write(l + "<br>");
+			document.write("Script Successfully" + "<br>");
+  */
+// closer function access outer function and inner function var outer function cannot access inner funcion
+    function  outerfun(){
+	
+	 var  outlocal = "I am a local variable of outer function";
+	  
+	// document.write(outlocal + "<br>");
+
+	function innerfun(){
+	  var innlocal = "I am local variable of inner function";
+	  document.write(outlocal + "<br>");
+      document.write(innlocal + "<br>");
+	}
+	innerfun();
+
+ 
+ 
+ 
+document.write("Script Successfully" + "<br>");	
+}
+outerfun();
+	
+
+</script>
+
+</body>
+
+</html>
