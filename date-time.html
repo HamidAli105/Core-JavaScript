@@ -6,6 +6,8 @@
 </head>
 <body>
   
+  <span id="demo"></span> <span> ~ </span>  <span id="demo1"></span> 
+
 	<script type="text/javascript">
 		document.write("<h2>Date and  Time </h2>");
 		document.write("<h4>One way to create date</h4> <br>");
@@ -143,6 +145,20 @@
        document.write(tarikh18.toGMTString() + "<br>");
       
     document.write("<h1>DoNe</h1>");
+     
+    // Automatic time date
+    var myVar = setInterval(myTimer, 1000);
+
+   function myTimer()
+    {
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+    }
+
+    var d = new Date();
+        d.setFullYear(2021);
+        document.getElementById("demo1").innerHTML = d.toLocaleDateString();
+        
   </script>
  </body>
 </html>
