@@ -27,21 +27,21 @@ var worker = [];
  document.write(typeof(worker[5]) +"<br>");
 
 // Two Method Create array
- document.write("Create Array Method two <br>");
+ document.write("<h2>Create Array Method two </h2>");
 // Simple Create array 
 var stu = ["Hamid", "Mubshar", "Farooq", 22];
 document.write(stu + "<br>");
 document.write(typeof(stu[0]) + "<br>");
 document.write(typeof(stu[3]) + "<br>");
 
-document.write("Create Array undefine <br>");
+document.write("<h2>Create Array undefine </h2>");
 // Three Method Create undefine array
 var undefi = [,,,786,,,105];
 document.write(undefi + "<br>");
 document.write(undefi[3] + "<br>");
 document.write(undefi[6] + "<br>");
 
-document.write("Four Method variable assign value in array <br>");
+document.write("F<h2>Our Method variable assign value in array</h2>");
 //create variable and assign value array
 var a = 20,
     b = 30,
@@ -54,7 +54,7 @@ document.write(plusvalue + "<br>");
 document.write(typeof(plusvalue) + "<br>");
 
 // Using array Constructor empty
-document.write("<h1>Using Constructor Array </h1><br>");
+document.write("<h2>Using Constructor Array </h2>");
 
 var constru = new Array(); 
 // create method one cosntructor array
@@ -67,20 +67,19 @@ document.write(constru + "<br>");
 document.write(typeof(constru[2]) + "<br>");
 
 // create method two cosntructor array
-
-document.write("Create Method Two Array  <br>");
+document.write("<h2>Create Method Two Array </h2>");
 
 var adword = new Array("Umer", "M.Afaq", "M.Asad", "M.Sami");
 var adwordCount = new Array(10, 20, 30, 40);
 document.write(adword + "<br>"); 
 document.write(adwordCount + "<br>"); 
 
-// Three method undefine arra
+document.write("<h2>Three method undefine arra</h2>"); 
 // if use one value then show coma seprate value if use one to more value then show value in browser
 var adwordCnt = new Array(786,105);
 document.write(adwordCnt + "<br>");
 
-// array modify
+document.write("<h2>Array modify</h2>"); 
 var seo = [" M.Tayab", " M.Hashim", " M.Talal", ""];
 document.write(seo + "<br>");
 seo[2] = "Hamid Ali";
@@ -92,15 +91,16 @@ seoteam[3] = "Hamid Ali Jutt";
 var ln = seo.length;  
 document.write(ln + "<br>");
 
-// Delete value in array
+document.write("<h2>Delete value in array</h2>"); 
 // delete seo[0];
 document.write(seoteam + "<br>");
 document.write(seo + "<br>");
 document.write(seo[3] +"<br>");
 
 // use for loop get array value 
-// create variable in for lop two method let and var let is local variable and var is global variable. var strat always then show all value array then strat 0 
-document.write("For loop <br>");
+// create variable in for loop two method let and var let is local variable and var is global variable.
+//  var strat always then show all value array then strat 0 
+document.write("<h2>For loop</h2> ");
 // Get value in array with 
 for (let i = 0; i <= ln; i++)
 {
@@ -108,7 +108,7 @@ document.write(i + " : " + seo[i] + "<br>");
 }
 
 // Foreach loop 
-document.write("<h1> Foreach loop </h1> <br>");
+document.write("<h2> Foreach loop </h2>");
 
 var devloper = ["Mubshar Hussain", "M.Farooq", "Imtiaz", "Umair", "Hamid"];
 // get data array with for each loop  value is used to show array value and index is used counte value
@@ -117,7 +117,7 @@ devloper.forEach(function(value, index){
 });
 
 // for of loop
- document.write("<h1>For of loop</h1> <br>");
+ document.write("<h2>For of loop</h2>");
 
 var devloper = ["Mubshar Hussain", "M.Farooq", "Imtiaz", "Umair", "Hamid"];
   // document.write(devloper + "<br>");
@@ -129,7 +129,7 @@ for(let value of devloper){
 
 // Input from user in array
 // defining array method one literal with empty array
-document.write("<h1>Input Value From User In Array</h1> <br>")
+document.write("<h2>Input Value From User In Array</h2>")
 
 var elm = prompt("Enter No. of Elements : ");
 var dev = [];
@@ -143,14 +143,14 @@ for(let i=0; i<=elm; i++)
 {
    dev[i] = prompt("Enter Name: ");
 }
-document.write("Array constructor value show <br>");
+document.write("<h2>Array constructor value show</h2>");
 for(let i=0; i<=ln; i++)
 {
    dev[i] = prompt("Enter Name: ");
 }
 
 // Display value for loop
-document.write("Display Value for loop <br>");
+document.write("<h2>Display Value for loop </h2>");
 
 for(let i=0; i<=elm; i++)
 {
@@ -165,7 +165,7 @@ for(let value of dev)
 }
 
 // Two Demsional array letarl method
-document.write("<h1> Two Demsional Array </h1> <br>");
+document.write("<h2> Two Demsional Array </h2>");
 var tablet = [[], [], []];
 
 tablet[0][0] = "Company : Iphone";
@@ -182,7 +182,8 @@ tablet[2][2] = "Size : Large";
 
 document.write("literal Array Method : " + tablet + "<br>");
 
-// Object  literal create two demsional array
+
+document.write("<h2>Object literal create two demsional array</h2>"); 
 var notebook = 
 [
           ["Hamid Ali", "Dell", 6230],
@@ -195,7 +196,7 @@ document.write("Note Book Author : " + notebook[0][0] + "<br>");
 document.write("Note Book Company : " + notebook[0][1] + "<br>");
 document.write("Note Book Model : " + notebook[0][2] + "<br>");
 
-   document.write("<h2>Array constructor create two demsional array </h2> <br>"); 
+document.write("<h2>Array constructor create two demsional array </h2>"); 
 var laptop = new Array
 (
           ["Aryan", "Iphone", 6230, 20000],
@@ -205,9 +206,9 @@ var laptop = new Array
 
 document.write("Constructor Array  value : " + laptop + "<br>");
 
-// Display array value with nested for loop
+document.write("<h2>Display array value with nested for loop</h2>");
 // Outer loop use for rows
-document.write("<h3>Use Nested For loop Array Constructor </h3><br>");
+document.write("<h2> Use Nested For loop Array Constructor </h2>");
 for (let i=0; i<3; i++)
 {
 // Inner loop for use columns
@@ -220,7 +221,7 @@ for (let i=0; i<3; i++)
 
 // Display array value with nested for loop
 
-document.write("<h3>Use Nested for loop Array literal</h3> <br>");
+document.write("<h2>Use Nested for loop Array literal</h2>");
 // Outer loop use for rows
 for (let i=0; i<=3; i++)
 {
@@ -236,7 +237,7 @@ for (let i=0; i<=3; i++)
  document.write(userinput);
 
 // Create 2D empty array method one
-document.write("<h1>Create empty array method one</h1> <br>")
+document.write("<h2>Create empty array method one</h2>")
 // using array literal
 var agency = [[], []];
 
