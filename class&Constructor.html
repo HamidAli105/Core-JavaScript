@@ -10,7 +10,7 @@
 
     // constructor is used to create object and initializing  object created within a class. 
     // There is only one special method with the name "Constructor" in a class
-document.write("<h1> Class Declaration</h1>");
+document.write("<h2> Class Declaration</h2>");
 
   var Tablet = function(model_no, sprice)
  {
@@ -30,8 +30,9 @@ document.write("<h1> Class Declaration</h1>");
   var samsung = new Tablet('Galaxay', 20000);
   var nokia   = new Tablet('Asha', 15000);
   nokia.data();
+  samsung.data(); 
 
-  document.write("Access private properites with public method <br>");
+  document.write("<h2>Access private properites with public method </h2> ");
 
  var laptop = function(model_no, sprice)
  {
@@ -45,7 +46,7 @@ document.write("<h1> Class Declaration</h1>");
   }
   
  }
-  var samsung = new laptop('Galaxay', 20000);
+var samsung = new laptop('Galaxay', 20000);
 document.write(samsung.sellingprice() + "<br>");
 
 // Class Declaration
@@ -83,8 +84,8 @@ var nokia = new Mobile();
 document.write(nokia.a + "<br>");
 document.write(nokia.show() + "<br>");
 document.write(nokia.display() + "<br>");
-
-// // Parameter constructor
+exit;
+ // Parameter constructor
 class Cell 
 {
  constructor(model_no, color)
@@ -126,6 +127,7 @@ document.write(dell.show() + "<br>");
 document.write(hp.show() + "<br>");
 
   document.write("<h3>DoNe</h3>");
+  
 	</script>
 
 </body>

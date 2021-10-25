@@ -20,7 +20,7 @@
 		var tarikh1 = new Date(1530867166586);
 		document.write(tarikh1 + "<br>");
        
-        document.write("<h4>Three way to create date</h4> <br>");
+        document.write("<h2>Three way to create date</h2>");
         var tarikh2 = new Date(2020, 6, 18, 11, 56, 30, 0);
         var tarikh3 = new Date(2020, 6, 18, 11, 56, 30);
         var tarikh4 = new Date(2020, 6, 18, 11, 56);
@@ -34,7 +34,7 @@
         document.write(tarikh6 + "<br>");
         document.write(tarikh7 + "<br>");
 
-        document.write("<h4>Four way to create date</h4> <br>");
+        document.write("<h2>Four way to create date</h2>");
         // create date string method three types of date ISO, Short date and long date.
         document.write("ISO Date way <br>");
         var tarikh8 = new Date("2020-06");
@@ -52,7 +52,7 @@
         var tarikh12 = new Date("June 18 2020");
         document.write(tarikh12 + "<br>");
 
-        document.write("<h1>Set Date Method </h1><br>");
+        document.write("<h2>Set Date Method </h2>");
         // Day as number 1-31
         // Hours as number 0- 23
         // Month as number 0-11 Ex = 0 = jan
@@ -81,10 +81,10 @@
         tarikh13.setFullYear(2023, 3, 5);
         document.write(tarikh13 + "<br>");
      
-        document.write("<h1>Get Date Method </h1><br>");
+        document.write("<h2>Get Date Method </h2>");
 
         var tarikh14 = new Date();
-        document.write("<h4>Get Date Method One</h4><br>");
+        document.write("<h2>Get Date Method One</h2>");
        document.write("Hours: " + tarikh14.getHours() + "<br>");
        document.write("Minutes: " + tarikh14.getMinutes() + "<br>");
        document.write("Seconds: " + tarikh14.getSeconds() + "<br>");
@@ -93,7 +93,7 @@
        document.write("Year: " + tarikh14.getFullYear() + "<br>");
        document.write("Day: " + tarikh14.getDay() + "<br>");
 
-       document.write("<h4>Get Date Method Two</h4>");
+       document.write("<h2>Get Date Method Two</h2>");
        var tarikh15 = new Date();
        var month = tarikh15.getMonth();
        var day = tarikh15.getDay();
@@ -112,7 +112,7 @@
           return dayname[daynumber];	
        } 
 
-       document.write("<h4> Date Format</h4>");
+       document.write("<h2> Date Format</h2>");
        var tarikh16 = new Date();
        document.write(formatDate(tarikh16)	+ "<br>");
 
@@ -125,7 +125,7 @@
        	return date + " / " + month + " / " + year;
        }
 
-       document.write("<h4> Time Format</h4>");
+       document.write("<h2> Time Format</h2>");
        var tarikh17 = new Date();
        document.write(formatTime(tarikh17)	+ "<br>");
 
@@ -138,7 +138,7 @@
        	return hour + " / " + minte + " / " + second;
        }
 
-       document.write("<h4>Convert Date into String</h4><br>");
+       document.write("<h2>Convert Date into String</h2>");
        var tarikh18 = new Date();
        document.write(tarikh18.toString() + "<br>");
        document.write(tarikh18.toUTCString() + "<br>");
