@@ -6,8 +6,8 @@
 <body>
 	<script type="text/javascript">
 		
-document.write("<h1> Inheritance Prototype Object</h1> <br>");
-document.write("<h1> One Method</h1> <br>");
+document.write("<h1> Inheritance Prototype Object</h1>");
+document.write("<h1> One Method</h1>");
 
 // function of inheritance
 function extend(child, parent)
@@ -79,7 +79,7 @@ console.log(galaxy.getModel());
 var phab2 = new Lenove('Phab 2');
 console.log(phab2.getModel());
 
-document.write("<h1>Two Method</h1> <br>");
+document.write("<h2>Two Method</h2> ");
 // Super class
  var Phone = function(number)
  {
@@ -117,7 +117,7 @@ var phn = new Phone(13);
 document.write(x786.getNumber() + "<br>");
 document.write(phn.getNumber() + "<br>");
 
-document.write("<h1>Composition or Mixins in Javascript</h1>");
+document.write("<h2>Composition or Mixins in Javascript</h2>");
 
 // Mixin Function
 function mixin (target, ...sources)
@@ -186,17 +186,17 @@ var Rahul = new Humain();
 var RoboCop = new Robot();
 
 // first create empty bracket for assign source feature assign empty bracket
-document.write("Humain Mixins <br>");
+document.write("<h2>Humain Mixins </h2>");
 var Rahul = Object.assign({}, eating, walking, talking);
 document.write(Rahul.eat() + Rahul.walk() + Rahul.talk() + "<br>");
 
-document.write("Robot Mixins <br>");
+document.write("<h2>Robot Mixins </h2>");
 var RoboCop = Object.assign({}, walking, talking, starting);
 document.write(RoboCop.walk() + RoboCop.talk() +  RoboCop.start() + 
 	"<br>");
-
-document.write("<h1> MultiLevel Level Inheritance <br> </h1>");
-document.write("<h1> Class Inheritance <br> </h1>");
+	exit;
+document.write("<h2> MultiLevel Level Inheritance </h2>");
+document.write("<h2> Class Inheritance </h2>");
 
 // The extends keyword is used in class declaration or class expression to create a class which is a child of another class.
 

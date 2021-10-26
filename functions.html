@@ -26,12 +26,12 @@ function ad(a, b, c)
   document.write("A: " + a + " B: " + b + " C: " + c + "<br>");
 }
 
-// add(20, 30, 50);
+ add(20, 30, 50);
 // missing parameter show undefined
 ad(20, 30);
 
 // Argument Object
- document.write("<h2> Argument Object and length property </h2> <br>");
+ document.write("<h2> Argument Object and length property </h2>");
   function display(name, email)
   {
   	var len = arguments.length;
@@ -53,14 +53,14 @@ document.write("<h2> For loop get argument value</h2> <br>");
  // disp("Name: Hamid Ali jutt", " Email: hamid@gmail.com", " Password:  Password1");
  disp("Name: Hamid Ali jutt", " Email: hamid@gmail.com", " Password:  Password1", 786105	);
  
- document.write("<h2> Callee Property</h2> <br>");
+ document.write("<h2> Callee Property </h2>");
  function disp(name, email, password)
   {
   		document.write(arguments.callee + " ");
   }
  disp("Name: Hamid Ali jutt", " Email: hamid@gmail.com", " Password:  Password1");
  
- document.write("<h2>Too Many Function Argument </h2> <br>");
+ document.write("<h2>Too Many Function Argument </h2>");
 
  function disp(a, b)
   {
@@ -68,7 +68,7 @@ document.write("<h2> For loop get argument value</h2> <br>");
   }
  disp(10, 20, 30);
  
- document.write("<h2> default parameter</h2> <br>");
+ document.write("<h2> Default parameter </h2>");
 // at the end write default parameter
 function add(a,b,c=70)
 {
@@ -97,8 +97,8 @@ function Add(a,b,c=[786, 105])
 
 Add(40, 60, [80, 100]);
 //  Add(40);
-exit;
-document.write("<h2>Rest parameter <h2> <br>");
+
+document.write("<h2>Rest parameter <h2>");
 // Rest Parameter is alternative array rest and argument difference rest is a array argument is not array but work with same array
 function Show(...args)
 {
@@ -106,8 +106,8 @@ function Show(...args)
 }
 Show(786, 105, "Jutt");
 
-document.write("Difference Between Rest parameter Argument Object <br>");
-document.write("Rest parameter <br>");
+document.write("<h2> Difference Between Rest parameter Argument Object </h2>");
+document.write("<h2> Rest parameter </h2>");
 function restshow(a,...args)
 {
  console.log(a);
@@ -115,9 +115,9 @@ function restshow(a,...args)
  document.write(a + "<br>");
  document.write(args + "<br>");
 }
-restshow(10,20,30,40,50);
+restshow(10,20,30,40,50,60,70);
 
-document.write("Argument Object <br>");
+document.write("<h2>Argument Object </h2>");
 function show(a)
 {
  console.log("a: " + a);
@@ -127,7 +127,7 @@ function show(a)
 }
 show(60,70,80,90,100);
 
-document.write("<h2>Return Statement</h2> <br>");
+document.write("<h2>Return Statement</h2>");
 // Return statement is used to multiple work then return parameter and called function.
 function multiple(a, b)
 {
@@ -137,7 +137,7 @@ function multiple(a, b)
 var x = multiple(20, 30);
 document.write(x + "<br>");
 
-document.write("<h2> Closure and Nested function </h2> <br>");
+document.write("<h2> Closure and Nested function </h2>");
   // closure is used to access outer function variable in inner function access but inner function cannto access variable outer function
   function show()
   {
@@ -167,7 +167,7 @@ function name()
 }
 name();
 
-document.write("<h2>Function Expression </h2>")
+document.write("<h2>Function Expression </h2>");
 
 var disp = function name()
 {
@@ -175,7 +175,7 @@ var disp = function name()
 }
 disp();
 
-document.write("<h2>Anonymous Function </h2><br>")
+document.write("<h2>Anonymous Function </h2>");
 // without function name is called anonymous function
  var email = function()
 {
@@ -183,7 +183,7 @@ document.write("<h2>Anonymous Function </h2><br>")
 }
 email();
 
-document.write("<h2>Passing Anonymous Function as Argument </h2><br>")
+document.write("<h2>Passing Anonymous Function as Argument </h2>");
  var gmail = function(myfun)
 {
  return myfun();
@@ -194,7 +194,7 @@ document.write(gmail (function()
     return "Geekyshows";
   }) + "<br>");
 
-document.write("<h2>Returning Anonymous Function </h2><br>");
+document.write("<h2>Returning Anonymous Function </h2>");
  function number(a)
  {
   return function(b)
@@ -204,9 +204,9 @@ document.write("<h2>Returning Anonymous Function </h2><br>");
  }
 
  var af = (number(20));
- document.write(af(30) + "<br>");
+ document.write(af(20) + "<br>");
 
-document.write("<h2> Arrow Function with parameter </h2><br>")
+document.write("<h2> Arrow Function with parameter </h2>");
 // arrow function can't called up function and not line break.
 var arrowfn = (a, b) => 
 {
@@ -214,7 +214,7 @@ var arrowfn = (a, b) =>
 };
 arrowfn(786, 105);
 
-document.write("<h2> Arrow Function default value </h2><br>")
+document.write("<h2> Arrow Function default value </h2>");
 // arrow function can't called up function and not line break.
 var arrowfn = (a, b=105) => 
 {
@@ -222,7 +222,7 @@ var arrowfn = (a, b=105) =>
 };
 arrowfn(786);
 
-document.write("<h2> Arrow Function with Rest Parameter </h2><br>")
+document.write("<h2> Arrow Function with Rest Parameter </h2>");
 // arrow function can't called up function and not line break.
 var arrowfn = (a,...argu) => 
 {
@@ -231,7 +231,7 @@ var arrowfn = (a,...argu) =>
 
 arrowfn(786, 105, 66);
 
-document.write("<h2> Arrow function </h2> <br>")
+document.write("<h2> Arrow function </h2>");
  var arfn = a =>
  {
    document.write(a + "<br>");
@@ -240,7 +240,7 @@ document.write("<h2> Arrow function </h2> <br>")
 
 arfn(105);
 
-document.write("<h2>Short arrow function</h2> <br>");
+document.write("<h2>Short arrow function</h2> ");
 // if use return statement then used curely bracket if used one to more parameter then used return statement
 var myfunN = (c,d) => { return c + d; } 
 
@@ -248,7 +248,7 @@ var myfunN = (c,d) => { return c + d; }
 
 document.write(myfunN(30, 20));
 
-document.write("<h2>Immediately_Invoked_Function_Expression(IIFE) </h2> <br>");
+document.write("<h2>Immediately_Invoked_Function_Expression(IIFE) </h2> ");
 // this function is used mostly local variable
 (function () { document.write("Hamid Ali jutt ")}) ();
 
@@ -259,7 +259,7 @@ document.write("<h2>Immediately_Invoked_Function_Expression(IIFE) </h2> <br>");
  
  }) ();
 
-document.write(" <h1> Factory Function </h1> <br>");
+document.write(" <h2> Factory Function </h2>");
 // factory function is used to same thins used multiple then used factory function. first return function used not distance bracket
 function Mobiles(model_no) 
 {
@@ -276,11 +276,10 @@ function Mobiles(model_no)
 
 var oppo = Mobiles('OPPO'); 
 document.write(oppo.model + " " + oppo.price( ) + "<br>");
-
 var vivo = Mobiles('VIVO'); 
 document.write(vivo.model + " " + vivo.memory + vivo.price( ) + "<br>");
 
-document.write("<h1>Check Properties Exist</h1> <br>");
+document.write("<h2>Check Properties Exist</h2>");
 document.write("<h4>Type of Operater Method </h4> <br>");
 if(typeof vivo.model !== 'undefined')
 {
@@ -302,7 +301,7 @@ else
   document.write("Doesnt Exist <br>");
 }
 
-document.write("<h1> hasOwnProperty Method </h1> <br>");
+document.write("<h2> hasOwnProperty Method </h2>");
 // this method is used to check key exist
 if(vivo.hasOwnProperty('color'))
 {
@@ -310,10 +309,10 @@ if(vivo.hasOwnProperty('color'))
 }
 else
 {
-  document.write("Does'nt Exist <br>");
+  document.write("Does'nt Exist");
 }
 
-document.write("<h1> Constructor</h1> <br>");
+document.write("<h2> Constructor</h2>");
  // this keyword is used to new object create point
 
 function Phone(model_name)

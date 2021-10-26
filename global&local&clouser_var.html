@@ -8,19 +8,21 @@
 <script>
 
 	//Global Variable access anywhere
-/*	var g = "I am a global variable";
+	var g = "I am a global variable";
 	function show(){
-	document.write(g + "<br>");//inside function
+	document.write(g + "<br>"); //inside function
 	}
- //show();
-//document.write(g + "<br>");//outside function
- if(true){
-  //document.write(g + "<br>");//inside function
- }*/
+//  show();
  
+document.write(g + "<br>"); //outside function
+ if(true){
+  document.write(g + "<br>");//inside function
+ }
+ show();
+
  //Local Variable access only inner function
 	
-/*	function disp(){
+	function disp(){
 	// if not use var then only alphabetic then call global variable
 	//var l = "I am a local variable";
 	  l = "I am a local variable";
@@ -29,7 +31,7 @@
  disp();
 		document.write(l + "<br>");
 			document.write("Script Successfully" + "<br>");
-  */
+  
 // closer function access outer function and inner function var outer function cannot access inner funcion
     function  outerfun(){
 	
