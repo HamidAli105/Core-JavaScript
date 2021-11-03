@@ -31,8 +31,7 @@ document.getElementById("demo").innerHTML =
  document.write("<h1>Creating Object Constructor</h1> <br>");
  var two = new Object();
 
- 
-  document.write("<h1>Object Method</h1> <br>")
+  document.write("<h2>Object Method</h2>")
   document.write("One Method <br>");
 
   // This method used space difference between two character only
@@ -50,7 +49,7 @@ document.getElementById("demo").innerHTML =
    document.write(fees['Super Man']  + "<br>");
    console.log(fees);
   
-   document.write("<h1>Declaration and Initialization  of Object Literal</h1> <br>")
+   document.write("<h2>Declaration and Initialization  of Object Literal</h2> ")
 
    document.write("<h2>Using Object Literal </h2> <br>")
    document.write("<h2>Declaration of object </h2> <br>")
@@ -61,7 +60,7 @@ document.write(". Method Properties <br>");
    fine.Hamid = 105;
    fine.Mubshar = 786;
    document.write(fine.Hamid + "<br>");
-
+  
 document.write("Literal Method <br>");
    fine['Aryan'] = 200;
    fine['Azan'] = 300;
@@ -72,7 +71,7 @@ document.write("Literal Method <br>");
    document.write(fine['Total']() + "<br>");
    document.write(fine.Total() + "<br>");
    
-   document.write("<h1>Declaration and Initialization  of Object Construct</h1> <br>")
+   document.write("<h2> Declaration and Initialization  of Object Construct </h2> ")
    var rupes = new Object();
    rupes['Hamid']   = 786;
    rupes['Saqib']   = 105;
@@ -85,14 +84,14 @@ document.write("Literal Method <br>");
    document.write(rupes.Saqib + "<br>");
    document.write(rupes.Final() + "<br>");
 
- document.write("<h1>Accessing Properties</h1>")
+ document.write("<h2> Accessing Properties </h2>");
  // square braket used distance two words and . method is not used two distance paragraph 
  var access ={Rahul : 100, Qasim : 200, "Hamid Ali" : 300}
   document.write(access['Qasim'] + "<br>");
   document.write(access.Rahul + "<br>");
   document.write(access['Hamid Ali'] + "<br>");
   
-  document.write("<h1>Adding Properties Method</h1> <br>");
+  document.write("<h2>Adding Properties Method</h2>");
   var student = {Hamid:"Well&Good", Ali:105}
   document.write(student.Hamid +"<br>");
   student.Qasim = 66;
@@ -105,7 +104,7 @@ document.write("Literal Method <br>");
   document.write(student.show() + "<br>");  
   console.log(student);
 
-  document.write("<h1>Object Prototype Method </h1> <br>");
+  document.write("<h2>Object Prototype Method </h2>");
   
   function Person(first, last, age, eye) {
   this.firstName = first;
@@ -120,7 +119,7 @@ var myFather = new Person("John", "Doe", 50, "blue");
 var myMother = new Person("Sally", "Rally", 48, "green");
 
 document.write("The age of my father is" + myFather.age);
-document.write("<h1>DoNe</h1>");
+document.write("<h2>DoNe</h2>");
  </script>
 
 

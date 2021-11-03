@@ -7,20 +7,21 @@
 <script type="text/javascript">
 // Concat value metho is used to merage one to more array
 // one method to create concat array
-document.write("<h1>Concat value Method </h1> <br>");
+document.write("<h2>Concat value Method </h2> ");
 var name = ["Hamid", "Qasim", "Abid"];
 var nick_name = name.concat(" Iqbal", " Mubshar");
 document.write(nick_name + "<br>");
 
-document.write("<h1>Concat Array Method </h1><br>");	
+document.write("<h2>Concat Array Method </h2>");	
 var fname = ["Kamran", "Jabran", "Faisal", "Faisal", "Nasir"];
 var lname = ["Hamid", "Qasim", "Abid","Aryan", "Farooq"];
 var faname = ["Iqbal", "Naseer", "Afzal"];
 var full_name = fname.concat(lname, faname);
 document.write(full_name + "<br>");
-	
-document.write("<h1> join method use to separte text</h1> <br>");
-//The join method is joins the elements of an array into a string and return the string. The elements will be separated by a specific separator.The default separator is comma(,).
+
+document.write("<h2> Join method use to separte text</h2>");
+//The join method is joins the elements of an array into a string and return the string. The elements 
+// will be separated by a specific separator.The default separator is comma(,).
 var seprt = faname.join(" ~ ");
 document.write(typeof(seprt + "<br>"));
 document.write("<br>");
@@ -29,14 +30,15 @@ document.write(faname + "<br>");
 document.write("Join Method <br>");
 document.write(seprt + "<br>");
 
-document.write("<h1>Reverse Method</h1> <br>");
+document.write("<h2> Reverse Method </h2> ");
 //The reverse () method reverses the order of the elements in an array.
 var revse = ["Hamid", "Ali", "Jutt"];
 revse.reverse();
 document.write(revse + "<br>");
 
-// Slice method is used to desired show data in browser end operator is not show in broswer if start 1 and end 5 aur five is not available in array then all value
-document.write("<h1></h1>Slice Method <br>");
+// Slice method is used to desired show data in browser end operator is not show in broswer if start 1 
+// and end 5 aur five is not available in array then all value
+document.write("<h2>Slice Method</h2>");
 // var slce = lname.slice(, 3);
 var slece = ["Hamid", "Ali", "Jutt", "Aryan", "Azan"];
 // var slce = slece.slice(1, 3);	
@@ -45,20 +47,22 @@ var slce = slece.slice(0, 9);
 document.write(slce + "<br>");
 
 // ToString method is used to convert array into string
-document.write("<h1>To String Method </h1><br>");
+document.write("<h2>To String Method </h2> ");
 var strngto = ["Qasim", "Bilal", "Abdullah", "Asif", "Zahid"];
 strngto.toString();
 document.write(strngto + "<br>");
 
-// Array.isArray() method is used to either array h k ni of array h tu true show if array value ni then show false. This method is not affect array value	
-document.write("<h1>Array is Array method </h1><br>");
+// Array.isArray() method is used to either array h k ni of array h tu true show if array value ni then 
+// show false. This method is not affect array value	
+document.write("<h2 >Array is Array method </h2>");
 var show = Array.isArray(["Iqbal", "Jutt"]);
 document.write(show + "<br>");
 var disp = Array.isArray("Iqbal", "Jutt");
 document.write(disp + "<br>");
 
-// Splice method this method is used adding and remove array value and this is affect array value. changing the content value in array.
-document.write("<h1>Splice Method </h1><br>");
+// Splice method this method is used adding and remove array value and this is affect array value. 
+// changing the content value in array.
+document.write("<h2>Splice Method </h2>");
 // Remove All Elements from index 2
 // Start value 2 and value 2 start value if desired start and end value remove value
 var splce = ["Hamid", "Ali", "Kamran", "Gill", "Mubshar"];
@@ -66,24 +70,24 @@ var splce = ["Hamid", "Ali", "Kamran", "Gill", "Mubshar"];
 // first delete value and two account value
  splce.splice(0, 1);
  document.write(splce + "<br>");
+ 
  // insert value and second if zero then only insert if one or more then delete array value.
  splce.splice(2, 0, "Aryan", "jutt"); /* only insert */
  splce.splice(2, 2, "Aryan", "jutt");/* insert and delete */
  document.write(splce + "<br>");
 
  // IdexOf method is used to find value in array with  start value name position and find out then show -1
- document.write("<h1>Index Of  Method  </h1> <br>");
+ document.write("<h2> Index Of  Method  </h2> ");
  
  var index = ["Saqib", "Afzal", "Asif", "Zahid", "Hamid", "Aqib"];
- var position = index.indexOf("Hamid");
+ var position = index.indexOf("Aqib");
  document.write(position + "<br>");
  
-
 // Fill method is used to add  static text in array
-document.write("<h1>Fill Method </h1> <br>");
+document.write("<h2> Fill Method </h2> ");
 var fl = ["Well", "Done", "Hamid", "Ali"];
 // one method to use fill array
-fl.fill("Good", 1, 3);
+fl.fill("Good", 1, 2);
 document.write(fl + "<br>");
 
 // two method to used fill array
@@ -92,7 +96,7 @@ var  new_array = new Array(3).fill(" H ~ A ");
 document.write(new_array + "<br>");
 
 // unshift method is used to begning insert element array
-document.write(" <h1>Unshift Method</h1> <br>");
+document.write(" <h2> Unshift Method </h2>");
 var unshft = ["Hamid", "Saqib", "Mubshar", "Aqib"];
 var unshft_length = unshft.unshift("Aryan", "Azan");
 document.write(unshft + "<br>");
@@ -106,7 +110,7 @@ document.write(psh + "<br>");
 document.write(psh_length + "<br>");
 
 // Shift Method is used to first value/element remove in array
-document.write("<h1>Shift Method </h1><br>");
+document.write("<h2>Shift Method </h2>");
 var shft = ["Hamid", "Ali", "jutt", "Kamran"];
 // single one value remove
 // shft.shift();
@@ -116,7 +120,7 @@ document.write(shft + "<br>");
 document.write(shft_removed + "<br>");
 
 // Pop method is used remove last element of array
- document.write("<h1>Pop Method </h1> <br>");
+ document.write("<h2>Pop Method </h2> ");
  var stu = ["Hamid Ali", "Hamid Jutt", "Mubshar Hussain", "Mubshar Jutt", "Aryan Jutt"];
 // stu.pop();
 var stu_removed = stu.pop();

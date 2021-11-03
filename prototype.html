@@ -29,13 +29,14 @@ var vivo = new Mobiles('ViVo', 3000);
  document.write(vivo.color + "<br>");
  console.log(oppo);
  console.log(vivo);
+ 
 // 
   for (var key in oppo)
   {
  	  document.write(key);
   }
 
-  document.write("<h1>Prototype Object Literal Method</h1> <br>");
+  document.write("<h2> Prototype Object Literal Method </h2>");
 // it will return Object.prototype in console.log
 console.log(Object.prototype);
 // var b is a object and object is a null
@@ -44,11 +45,11 @@ var b = {}
 // if this function used show null in console log 
 console.log(Object.getPrototypeOf(Object.prototype));
 
-  document.write("<h1>Prototype Object Construct Method</h1> <br>");
+  document.write("<h2> Prototype Object Construct Method </h2> ");
   var b1 = new Object();
  console.log(Object.getPrototypeOf(b1));
 
- document.write("<h1>Prototype Object Array Method</h1> <br>");
+ document.write("<h2> Prototype Object Array Method </h2> ");
   var b3 = new Array();
   console.log(Object.getPrototypeOf(b3));
   // use b3 var use array.prototype and array.prototype used object.prototype and object used null
