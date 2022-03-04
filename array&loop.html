@@ -34,14 +34,14 @@ document.write(stu + "<br>");
 document.write(typeof(stu[0]) + "<br>");
 document.write(typeof(stu[3]) + "<br>");
 
-document.write("<h2>Create Array undefine </h2>");
+document.write("<h2> Three Method Create Array Undefine </h2>");
 // Three Method Create undefine array
 var undefi = [,,,786,,,105];
 document.write(undefi + "<br>");
 document.write(undefi[3] + "<br>");
 document.write(undefi[6] + "<br>");
 
-document.write("F<h2>Our Method variable assign value in array</h2>");
+document.write("<h2> Four Method variable assign value in array </h2>");
 //create variable and assign value array
 var a = 20,
     b = 30,
@@ -82,7 +82,7 @@ document.write(adwordCnt + "<br>");
 document.write("<h2>Array modify</h2>"); 
 var seo = [" M.Tayab", " M.Hashim", " M.Talal", ""];
 document.write(seo + "<br>");
-seo[2] = "Hamid Ali";
+seo[3] = "Hamid Ali";
 document.write(seo + "<br>")
 var seoteam = seo;
 // Insert value in array
@@ -92,7 +92,7 @@ var ln = seo.length;
 document.write(ln + "<br>");
 
 document.write("<h2>Delete value in array</h2>"); 
-// delete seo[0];
+//  delete seo[0];
 document.write(seoteam + "<br>");
 document.write(seo + "<br>");
 document.write(seo[3] +"<br>");
@@ -124,7 +124,7 @@ var devloper = ["Mubshar Hussain", "M.Farooq", "Imtiaz", "Umair", "Hamid"];
 for(let value of devloper){
   // if show output value then show only one br show property then show developer then show array property counte 
     document.write(value + "<br>");
-    // document.write(devloper + "<br>");
+    document.write(devloper + "<br>");
 }
 
 // Input from user in array
@@ -143,7 +143,9 @@ for(let i=0; i<=elm; i++)
 {
    dev[i] = prompt("Enter Name: ");
 }
+
 document.write("<h2>Array constructor value show</h2>");
+
 for(let i=0; i<=ln; i++)
 {
    dev[i] = prompt("Enter Name: ");
@@ -181,7 +183,6 @@ tablet[2][1] = "Color : Gray";
 tablet[2][2] = "Size : Large";
 
 document.write("literal Array Method : " + tablet + "<br>");
-
 
 document.write("<h2>Object literal create two demsional array</h2>"); 
 var notebook = 
@@ -288,6 +289,8 @@ for (let i = 0; i< rows; i++)
 }
 
 document.write("<h3> DoNe </h3> <br>");
+
+
 </script>
 </body>
 </html>
